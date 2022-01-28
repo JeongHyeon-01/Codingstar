@@ -1,13 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <title>Instagram</title>
+  </head>
+  <body>
+    <main class="main">
+      <article class="article">
+        <div class="login-img">
+          <div class="img">
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+        </div>
 
-</body>
+        <div class="login-sec">
+          <div class="login-main">
+            <h1>Instagram</h1>
+            <div class="login-main__form">
+              <form class="form">
+                <div class="form-log">
+                  <div class="form-log__id">
+                    <label
+                      ><span class="id__text">전화번호, 사용자 이름 또는 이메일</span
+                      ><input label="전화번호, 사용자 이름 또는 이메일" required type="text" maxlength="10" autocapitalize="off" autocorrect="off"
+                    /></label>
+                  </div>
+                </div>
+                <div class="form-log">
+                  <div class="form-log__pw">
+                    <label><span class="pw__text">비밀번호</span><input aria-label="비밀번호" required type="password" autocapitalize="off" autocorrect="off" /></label>
+                  </div>
+                </div>
+                <div class="form-log">
+                  <button class="form-log__btn" type="submit" disabled>로그인</button>
+                </div>
+                <div class="form-log__line">
+                  <div class="line"></div>
+                  <div class="line-text">또는</div>
+                  <div class="line"></div>
+                </div>
+                <div class="form-log__fb">
+                  <button>
+                    <span class="fb-logo">로고</span>
+                    <span class="fb-log">Facebook 으로 로그인</span>
+                  </button>
+                  <a href="#" class="form-log__forget">비밀번호를 잊으셨나요?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="sign">
+            <div class="sign-text">
+              <p>
+                계정이 없으신가요?<a href="#"><span>가입하기</span></a>
+              </p>
+            </div>
+          </div>
+          <div class="ad">
+            <p></p>
+            <div class="ad-lcon">
+              <a href="#">앱스토에</a>
+              <a href="#">구글플레이</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
 </html>
