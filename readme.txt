@@ -9,3 +9,4 @@ test : 커밋 푸쉬 PR 테스트, 1/28 1시 20분 용현!
 
 Test : 민주
 Test : 기존 branch 삭제, 새로운 branch 생성하여 작업
+Test : idea폴더 삭제 후, glee 브랜치에서 커밋 20220129
