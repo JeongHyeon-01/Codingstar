@@ -11,19 +11,22 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet" />
     <title>Instagram</title>
   </head>
+
+  <!-- HTML Markup -->
   <body>
     <section class="section">
       <div></div>
+      <!-- 공간 분리를 위한 빈 div-->
 
-      <!-- main  -->
+      <!-- main form-->
       <main class="main">
         <article class="article">
-          <!-- main-img -->
-          <div class="login-img">
-            <div class="img">
+          <!-- img section -->
+          <div class="index-section">
+            <div class="index-section__img">
               <img src="https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg" alt="" />
               <img src="" alt="" />
               <img src="" alt="" />
@@ -31,58 +34,39 @@
               <img src="" alt="" />
             </div>
           </div>
+
           <!-- login-form-section -->
-          <div class="login-sec">
-            <div class="login-main">
+          <div class="form-section">
+            <form class="main-form">
               <h1>Instagram</h1>
-              <div class="login-main__form">
-                <form class="form">
-                  <div class="form-log">
-                    <div class="form-log__id">
-                      <label
-                        ><span class="input__text">전화번호, 사용자 이름 또는 이메일</span
-                        ><input class="input__box" label="전화번호, 사용자 이름 또는 이메일" required type="text" maxlength="75" autocapitalize="off" autocorrect="off"
-                      /></label>
-                    </div>
-                  </div>
-                  <div class="form-log">
-                    <div class="form-log__pw">
-                      <label><span class="input__text">비밀번호</span> <input class="input__box" label="비밀번호" required type="password" autocapitalize="off" autocorrect="off" /></label>
-                      <div class="input-pw__toggle hidden">비밀번호 표시</div>
-                    </div>
-                  </div>
-                  <div class="form-log">
-                    <button class="form-log__btn" type="submit" disabled>로그인</button>
-                  </div>
-                  <div class="form-log__line">
-                    <div class="line"></div>
-                    <div class="line-text">또는</div>
-                    <div class="line"></div>
-                  </div>
-                  <div class="form-log__fb">
-                    <button>
-                      <span class="fb-logo"><i class="fab fa-facebook-square"></i></span>
-                      <span class="fb-log">Facebook으로 로그인</span>
-                    </button>
-                    <a href="#" class="form-log__forget">비밀번호를 잊으셨나요?</a>
-                  </div>
-                </form>
+              <div class="main-form__input">
+                <label><input type="text" autocapitalize="off" autocorrect="off" required /><span>전화번호, 사용자 이름 또는 이메일</span></label>
               </div>
-            </div>
-
-            <!-- sign-up section -->
-            <div class="sign">
-              <div class="sign-text">
-                <p>
-                  계정이 없으신가요?<a href="#"><span>가입하기</span></a>
-                </p>
+              <div class="main-form__input">
+                <label><input type="password" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span></label>
               </div>
+              <div class="main-form_btn">
+                <button disabled type="submit">로그인</button>
+              </div>
+              <div class="main-form__or">
+                <div class="or-line"></div>
+                <div class="or-line-text">또는</div>
+                <div class="or-line"></div>
+              </div>
+              <div class="main-form__fb">
+                <button type="button">
+                  <span class="fb-logo"><i class="fab fa-facebook-square"></i></span>
+                  <span>Facebook으로 로그인</span>
+                </button>
+              </div>
+              <a href="#" class="form-log__forget">비밀번호를 잊으셨나요?</a>
+            </form>
+            <div class="signup">
+              <p>계정이 없으신가요?<a href="#">가입하기</a></p>
             </div>
-
-            <!-- app download section -->
-            <div class="ad">
+            <div class="app-dn">
               <p>앱을 다운로드하세요.</p>
-              <div class="ad-icon">
+              <div class="app-dn__icon">
                 <a href="#"><img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png" /></a>
                 <a href="#"><img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png" /></a>
               </div>
@@ -93,8 +77,8 @@
 
       <!-- footer  -->
       <footer class="footer">
-        <div class="footer-items">
-          <div class="item__link">
+        <div class="footer-item">
+          <div class="footer-item__link">
             <div>
               <ul>
                 <li><a href="#">Meta</a></li>
@@ -124,11 +108,9 @@
             </div>
           </div>
 
-          <div class="item__lang">
+          <div class="footer-item__lang">
             <div class="lang-select">
-              <div>
-                <span>한국어</span><span><i class="fas fa-chevron-down"></i></span>
-              </div>
+              <span>한국어</span><span><i class="fas fa-chevron-down"></i></span>
               <select>
                 <option value="af">Afrikaans</option>
                 <option value="cs">Čeština</option>
@@ -188,5 +170,6 @@
       </footer>
     </section>
     <script defer src="./script/all.js"></script>
+    <script defer src="./script/script.js"></script>
   </body>
 </html>
