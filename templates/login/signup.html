@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/signup.css" />
 
+    <!-- icon next to title -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" />
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,10 +29,12 @@
           <h1>Instagram</h1>
           <h2>친구들의 사진과 동영상을 보려면 가입하세요.</h2>
           <div class="main-form__fb">
-            <button type="button">
-              <span class="fb-logo"><i class="fab fa-facebook-square"></i></span>
-              <span>Facebook으로 로그인</span>
-            </button>
+            <a
+              href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%2522vr6gyokdk6x71se8wl1wkdnez4eh536zg7qph1jimwhkm0pjy2%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Dko_KR%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dbfa0e944-ffd9-4a6e-a7f6-9d9fdfc15995%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%2522vr6gyokdk6x71se8wl1wkdnez4eh536zg7qph1jimwhkm0pjy2%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=ko_KR&pl_dbl=0"
+              ><button type="button">
+                <span class="fb-logo"><i class="fab fa-facebook-square"></i></span> <span> Facebook으로 로그인</span>
+              </button></a
+            >
           </div>
           <div class="main-form__or">
             <div class="or-line"></div>
@@ -37,20 +42,21 @@
             <div class="or-line"></div>
           </div>
           <div class="main-form__input">
-            <label> <input type="text" autocapitalize="off" autocorrect="off" required /><span>휴대폰 번호 또는 이메일 주소</span></label>
+            <label> <input id="id" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>휴대폰 번호 또는 이메일 주소</span></label>
           </div>
 
           <div class="main-form__input">
-            <label> <input type="text" autocapitalize="off" autocorrect="off" required /><span>성명</span></label>
+            <label> <input id="name" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>성명</span></label>
           </div>
           <div class="main-form__input">
-            <label><input type="text" autocapitalize="off" autocorrect="off" required /><span>사용자 이름</span></label>
+            <label><input id="nickname" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>사용자 이름</span></label>
           </div>
           <div class="main-form__input">
-            <label><input type="password" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span></label>
+            <label><input id="pw" type="password" autocomplete="off" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
+            <div class="input-pw hidden">비밀번호 표시</div>
           </div>
           <div class="main-form_btn">
-            <button disabled type="submit">가입</button>
+            <button id="login" disabled type="submit">가입</button>
           </div>
         </form>
         <div class="signup">
@@ -145,6 +151,7 @@
         </div>
       </footer>
     </section>
-    <script src="./script/all.js"></script>
+    <script defer src="./script/all.js"></script>
+    <script defer src="./script/signupscript.js"></script>
   </body>
 </html>

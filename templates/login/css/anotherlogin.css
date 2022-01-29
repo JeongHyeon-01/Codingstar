@@ -53,6 +53,10 @@ body {
   margin: 20px auto 40px;
 }
 
+.main-form .main-form__input {
+  position: relative;
+}
+
 .main-form .main-form__input label {
   position: relative;
 }
@@ -102,11 +106,21 @@ body {
   padding-bottom: 7px;
 }
 
+.main-form .main-form__input .input-pw {
+  position: absolute;
+  top: 17px;
+  right: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .main-form .main-form_btn button {
   margin: 11px 0 0;
   outline: 0;
   border: 0;
   background: #0095f6;
+  color: #ffffff;
   border-radius: 3px;
   width: 268px;
   height: 30px;
@@ -159,6 +173,7 @@ body {
   font-size: 14px;
   font-weight: 600;
   margin: 10px 0;
+  cursor: pointer;
 }
 
 .main-form .main-form__fb button .fb-logo {
