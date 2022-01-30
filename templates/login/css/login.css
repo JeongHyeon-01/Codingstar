@@ -35,10 +35,36 @@ body {
   background-size: 454px 618px;
   -ms-flex-preferred-size: 440px;
       flex-basis: 440px;
+  position: relative;
 }
 
 .article .index-section .index-section__img {
   margin: 99px 0 0 151px;
+}
+
+.article .index-section .index-section__img img:nth-child(1) {
+  visibility: hidden;
+  position: absolute;
+}
+
+.article .index-section .index-section__img img:nth-child(2) {
+  visibility: hidden;
+  position: absolute;
+}
+
+.article .index-section .index-section__img img:nth-child(3) {
+  visibility: hidden;
+  position: absolute;
+}
+
+.article .index-section .index-section__img img:nth-child(4) {
+  visibility: hidden;
+  position: absolute;
+}
+
+.article .index-section .index-section__img img:nth-child(5) {
+  visibility: visible;
+  position: absolute;
 }
 
 .main-form {
@@ -63,6 +89,10 @@ body {
   font-size: 4.5em;
   text-align: center;
   margin: 20px auto 40px;
+}
+
+.main-form .main-form__input {
+  position: relative;
 }
 
 .main-form .main-form__input label {
@@ -114,11 +144,21 @@ body {
   padding-bottom: 7px;
 }
 
+.main-form .main-form__input .input-pw {
+  position: absolute;
+  top: 17px;
+  right: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .main-form .main-form_btn button {
   margin: 11px 0 0;
   outline: 0;
   border: 0;
   background: #0095f6;
+  color: #ffffff;
   border-radius: 3px;
   width: 268px;
   height: 30px;
@@ -171,6 +211,7 @@ body {
   font-size: 14px;
   font-weight: 600;
   margin: 10px 0;
+  cursor: pointer;
 }
 
 .main-form .main-form__fb button .fb-logo {
@@ -306,10 +347,6 @@ body {
   border: 0;
   opacity: 0;
   cursor: pointer;
-}
-
-.width-small {
-  width: 192px !important;
 }
 
 .hidden {

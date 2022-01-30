@@ -53,7 +53,11 @@ section {
   color: #8e8e8e;
 }
 
-.main-form .main-form__fb button {
+.main-form .main-form__fb a {
+  text-decoration: none;
+}
+
+.main-form .main-form__fb a button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +69,7 @@ section {
           align-items: center;
   outline: 0;
   border: 0;
-  background: #0095f6;
+  background: #39a4eb;
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;
@@ -76,9 +80,14 @@ section {
   border-radius: 4px;
   width: 268px;
   height: 32px;
+  cursor: pointer;
 }
 
-.main-form .main-form__fb button .fb-logo {
+.main-form .main-form__fb a button:active {
+  background: #39a4ebcc;
+}
+
+.main-form .main-form__fb a button .fb-logo {
   font-size: 18px;
   margin-right: 8px;
 }
@@ -107,6 +116,10 @@ section {
   font-size: 13px;
   font-weight: 600;
   color: #8e8e8e;
+}
+
+.main-form .main-form__input {
+  position: relative;
 }
 
 .main-form .main-form__input label {
@@ -158,11 +171,21 @@ section {
   padding-bottom: 7px;
 }
 
+.main-form .main-form__input .input-pw {
+  position: absolute;
+  top: 17px;
+  right: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .main-form .main-form_btn button {
   margin: 11px 0 28px;
   outline: 0;
   border: 0;
   background: #0095f6;
+  color: #ffffff;
   border-radius: 3px;
   width: 268px;
   height: 30px;
@@ -295,4 +318,8 @@ section {
   border: 0;
   opacity: 0;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
