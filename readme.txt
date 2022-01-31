@@ -12,10 +12,13 @@ Test : 기존 branch 삭제, 새로운 branch 생성하여 작업
 Test : idea폴더 삭제 후, glee 브랜치에서 커밋 20220129
 
 Add : 기능 추가 (20220130 용현)
- - 실제 인스타그램과 동일한 효과 및 기능 구현 (img carousel 제외)
+ - 실제 인스타그램과 동일하게 효과 및 기능 구현 (img carousel 제외)
  - id, pw 일정 갯수 이상 입력되어야 버튼 활성화, 비밀번호 숨기기 표시하기 기능
 
 Add : main page 및 login page 임시페이지 연결 완료 (20220130 정현,강호)
+
+Add : codingstar 로 들어갈시 메인에 로그인페이지로 이동 및 가입하기 페이지 연결 (20220131 정현)
+Add : users 모델 부분 작성 : 테스트용 입니다. 회의 후 바뀔 수 있음! (20220131 강호)
 
 Modify : login page 인증 method POST로 변경, HTTP 통신 준비 (20220131 용현)
  - Instagram title을 Codingstagram 으로 변경 (실제 인스타랑 헷갈려서)
