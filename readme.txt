@@ -19,3 +19,6 @@ Add : main page 및 login page 임시페이지 연결 완료 (20220130 정현,�
 
 Add : codingstar 로 들어갈시 메인에 로그인페이지로 이동 및 가입하기 페이지 연결 (20220131 정현)
 Add : users 모델 부분 작성 : 테스트용 입니다. 회의 후 바뀔 수 있음! (20220131 강호)
+
+Modify : login page 인증 method POST로 변경, HTTP 통신 준비 (20220131 용현)
+ - Instagram title을 Codingstagram 으로 변경 (실제 인스타랑 구분을 위함)
