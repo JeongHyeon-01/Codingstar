@@ -22,3 +22,4 @@ Add : users 모델 부분 작성 : 테스트용 입니다. 회의 후 바뀔 수
 
 Modify : login page 인증 method POST로 변경, HTTP 통신 준비 (20220131 용현)
  - Instagram title을 Codingstagram 으로 변경 (실제 인스타랑 구분을 위함)
+

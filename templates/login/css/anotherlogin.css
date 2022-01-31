@@ -311,10 +311,6 @@ body {
   cursor: pointer;
 }
 
-.width-small {
-  width: 192px !important;
-}
-
 .hidden {
   display: none;
 }
