@@ -16,3 +16,6 @@ Add : 기능 추가 (20220130 용현)
  - id, pw 일정 갯수 이상 입력되어야 버튼 활성화, 비밀번호 숨기기 표시하기 기능
 
 Add : main page 및 login page 임시페이지 연결 완료 (20220130 정현,강호)
+
+Modify : login page 인증 method POST로 변경, HTTP 통신 준비 (20220131 용현)
+ - Instagram title을 Codingstagram 으로 변경 (실제 인스타랑 헷갈려서)
