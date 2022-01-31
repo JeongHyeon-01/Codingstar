@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/anotherlogin.css" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static './css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static './css/anotherlogin.css' %}" />
+
+    <!-- '용현'용 css link -->
+    <!-- <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/anotherlogin.css" /> -->
 
     <!-- icon next to title -->
     <link rel="shortcut icon" type="image/x-icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" />
@@ -15,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet" />
-    <title>Instagram</title>
+    <title>Codingstagram</title>
   </head>
 
   <!-- HTML Markup -->
@@ -31,7 +36,7 @@
 
           <!-- login-form-section -->
           <div class="form-section">
-            <form class="main-form">
+            <form class="main-form" method="POST">
               <h1>Instagram</h1>
               <div class="main-form__input">
                 <label><input id="id" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>전화번호, 사용자 이름 또는 이메일</span></label>

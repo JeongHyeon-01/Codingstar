@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- CSS -->
     {% load static %}
-    <link rel="stylesheet" href="{% static './css/reset.css' %}">
+    <link rel="stylesheet" href="{% static './css/reset.css' %}" />
     <link rel="stylesheet" href="{% static './css/login.css' %}" />
+
+    <!-- '용현'용 css link -->
+    <!-- <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/login.css" /> -->
 
     <!-- icon next to title -->
     <link rel="shortcut icon" type="image/x-icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" />
@@ -42,7 +46,7 @@
 
           <!-- login-form-section -->
           <div class="form-section">
-            <form class="main-form">
+            <form class="main-form" method="POST">
               <h1>Instagram</h1>
               <div class="main-form__input">
                 <label><input id="id" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>전화번호, 사용자 이름 또는 이메일</span></label>
