@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/login.css" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static './css/reset.css' %}">
+    <link rel="stylesheet" href="{% static './css/login.css' %}" />
 
     <!-- icon next to title -->
     <link rel="shortcut icon" type="image/x-icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" />
@@ -70,7 +71,7 @@
               <a href="#" class="form-log__forget">비밀번호를 잊으셨나요?</a>
             </form>
             <div class="signup">
-              <p>계정이 없으신가요?<a href="signup.html">가입하기</a></p>
+              <p>계정이 없으신가요?<a href="{% url 'signup' %}">가입하기</a></p>
             </div>
             <div class="app-dn">
               <p>앱을 다운로드하세요.</p>
