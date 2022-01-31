@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet" />
-    <title>Instagram</title>
+    <title>Codingstagram</title>
   </head>
 
   <!-- HTML Markup -->
@@ -41,13 +41,14 @@
 
           <!-- login-form-section -->
           <div class="form-section">
-            <form class="main-form">
+            <form class="main-form" method="POST">
+              <!-- {% csrf_token %} Django POST Token 발행시 -->
               <h1>Instagram</h1>
               <div class="main-form__input">
-                <label><input id="id" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>전화번호, 사용자 이름 또는 이메일</span></label>
+                <label><input id="id" type="text" name="id" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>전화번호, 사용자 이름 또는 이메일</span></label>
               </div>
               <div class="main-form__input">
-                <label><input id="pw" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
+                <label><input id="pw" type="password" name="password" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
                 <div class="input-pw hidden">비밀번호 표시</div>
               </div>
               <div class="main-form_btn">
@@ -89,9 +90,9 @@
           <div class="footer-item__link">
             <div>
               <ul>
-                <li><a href="#">Meta</a></li>
-                <li><a href="#">소개</a></li>
-                <li><a href="#">블로그</a></li>
+                <li><a href="https://about.facebook.com/meta">Meta</a></li>
+                <li><a href="https://about.instagram.com/">소개</a></li>
+                <li><a href="https://about.instagram.com/blog">블로그</a></li>
                 <li><a href="#">채용 정보</a></li>
                 <li><a href="#">도움말</a></li>
                 <li><a href="#">API</a></li>

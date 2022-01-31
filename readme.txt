@@ -12,7 +12,7 @@ Test : 기존 branch 삭제, 새로운 branch 생성하여 작업
 Test : idea폴더 삭제 후, glee 브랜치에서 커밋 20220129
 
 Add : 기능 추가 (20220130 용현)
- - 실제 인스타그램과 똑같이 효과 및 기능 구현 (img carousel 제외)
+ - 실제 인스타그램과 동일한 효과 및 기능 구현 (img carousel 제외)
  - id, pw 일정 갯수 이상 입력되어야 버튼 활성화, 비밀번호 숨기기 표시하기 기능
 
 Add : main page 및 login page 임시페이지 연결 완료 (20220130 정현,강호)

@@ -15,14 +15,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet" />
-    <title>Instagram</title>
+    <title>Codingstagram</title>
   </head>
 
   <!-- HTML Markup -->
   <body>
     <section class="section">
       <div></div>
-      <!-- 공간 분리를 위한 빈 div-->
+      <!-- flex. space-between 을 사용하기 위한 빈 div-->
 
       <!-- main form-->
       <main class="main">
@@ -31,13 +31,14 @@
 
           <!-- login-form-section -->
           <div class="form-section">
-            <form class="main-form">
+            <!-- {% csrf_token %} Django POST Token 발행시 -->
+            <form class="main-form" method="POST">
               <h1>Instagram</h1>
               <div class="main-form__input">
-                <label><input id="id" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>전화번호, 사용자 이름 또는 이메일</span></label>
+                <label><input id="id" name="id" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>전화번호, 사용자 이름 또는 이메일</span></label>
               </div>
               <div class="main-form__input">
-                <label><input id="pw" type="password" autocomplete="off" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
+                <label><input id="pw" name="password" type="password" autocomplete="off" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
                 <div class="input-pw hidden">비밀번호 표시</div>
               </div>
               <div class="main-form_btn">
