@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="{% static './css/reset.css' %}" />
     <link rel="stylesheet" href="{% static './css/signup.css' %}" />
 
+    <!-- JavaScript -->
+    <script defer src="{% static './script/all.js' %}"></script>
+    <script defer src="{% static './script/signupscript.js' %}"></script>
+
     <!-- '용현'용 css link -->
-    <!-- <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/signup.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/signup.css" /> -->
 
     <!-- icon next to title -->
     <link rel="shortcut icon" type="image/x-icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" />
@@ -20,7 +24,7 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@100&display=swap" rel="stylesheet" />
     <title>로그인 • Codingstagram</title>
   </head>
 
@@ -65,7 +69,7 @@
           </div>
         </form>
         <div class="signup">
-          <p>계정이 있으신가요?<a href="anotherlogin.html">로그인</a></p>
+          <p>계정이 있으신가요?<a href="{% url 'anotherlogin' %}">로그인</a></p>
         </div>
         <div class="app-dn">
           <p>앱을 다운로드하세요.</p>
@@ -156,7 +160,5 @@
         </div>
       </footer>
     </section>
-    <script defer src="./script/all.js"></script>
-    <script defer src="./script/signupscript.js"></script>
   </body>
 </html>

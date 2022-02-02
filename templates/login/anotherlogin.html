@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="{% static './css/reset.css' %}" />
     <link rel="stylesheet" href="{% static './css/anotherlogin.css' %}" />
 
+    <!-- JavaScript -->
+    <script defer src="{% static './script/all.js' %}"></script>
+    <script defer src="{% static './script/anotherlogin.js' %}"></script>
+
     <!-- '용현'용 css link -->
-    <!-- <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/anotherlogin.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/anotherlogin.css" /> -->
 
     <!-- icon next to title -->
     <link rel="shortcut icon" type="image/x-icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" />
@@ -19,7 +23,7 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@100&display=swap" rel="stylesheet" />
     <title>Codingstagram</title>
   </head>
 
@@ -42,7 +46,7 @@
                 <label><input id="id" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>전화번호, 사용자 이름 또는 이메일</span></label>
               </div>
               <div class="main-form__input">
-                <label><input id="pw" type="password" autocomplete="off" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
+                <label><input id="pw" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
                 <div class="input-pw hidden">비밀번호 표시</div>
               </div>
               <div class="main-form_btn">
@@ -65,7 +69,7 @@
               <a href="#" class="form-log__forget">비밀번호를 잊으셨나요?</a>
             </form>
             <div class="signup">
-              <p>계정이 없으신가요?<a href="signup.html">가입하기</a></p>
+              <p>계정이 없으신가요?<a href="{% url 'signup' %}">가입하기</a></p>
             </div>
             <div class="app-dn">
               <p>앱을 다운로드하세요.</p>
@@ -96,17 +100,6 @@
                 <li><a href="#">해시태그</a></li>
                 <li><a href="#">위치</a></li>
                 <li><a href="#">Instagram Lite</a></li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li><a href="#">뷰티</a></li>
-                <li><a href="#">댄스</a></li>
-                <li><a href="#">피트니스</a></li>
-                <li><a href="#">식음료</a></li>
-                <li><a href="#">집 및 정원</a></li>
-                <li><a href="#">음악</a></li>
-                <li><a href="#">시각 예술</a></li>
               </ul>
             </div>
           </div>
@@ -172,7 +165,5 @@
         </div>
       </footer>
     </section>
-    <script defer src="./script/all.js"></script>
-    <script defer src="./script/loginscript.js"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 body {
   background-color: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 .section {
@@ -27,6 +28,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 32px auto 0;
+  padding-bottom: 32px;
 }
 
 .article .index-section {
@@ -140,7 +142,7 @@ body {
 
 .main-form .main-form__input label input:focus {
   outline: 0;
-  border: 1px solid #8e8e8e;
+  border: 1px solid #a8a8a8;
 }
 
 .main-form .main-form__input label input:valid + span {
@@ -194,7 +196,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 17px 40px;
+  margin: 19px 40px;
   cursor: default;
 }
 
@@ -205,7 +207,7 @@ body {
 }
 
 .main-form .main-form__or .or-line-text {
-  margin: 3px 18px -2px;
+  margin: 0 18px -2px;
   font-size: 13px;
   font-weight: 600;
   color: #8e8e8e;
@@ -298,7 +300,7 @@ body {
 }
 
 .footer-item {
-  margin: 0 0 52px;
+  margin: 24px 0 52px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,7 +322,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
   font-size: 12px;
 }
 
@@ -334,6 +336,7 @@ body {
 }
 
 .footer-item .footer-item__lang {
+  margin-top: 11px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,7 +348,7 @@ body {
 }
 
 .footer-item .footer-item__lang span {
-  margin-right: 5px;
+  margin-right: 3px;
 }
 
 .footer-item .footer-item__lang .lang-select {
