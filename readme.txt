@@ -25,4 +25,6 @@ Modify : login page 인증 method POST로 변경, HTTP 통신 준비 (20220131 �
 
 Add : 실제 인스타그램과 동일한 로그인 이미지 5초마다 전환효과 구현 (20220201 용현)
 
-Modify : CSS 자잘한 간격 안맞는부분 수정 urls.py , views.py 수정, html 파일 경로 1개 추가
+Modify : CSS 자잘한 간격 안맞는부분 수정  (20220202 용현)
+ - 백엔드부분 urls.py , views.py 수정, html 파일 경로 1개 추가
+ - 필요없는 console.log 삭제  
