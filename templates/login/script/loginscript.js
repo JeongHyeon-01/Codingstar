@@ -55,7 +55,6 @@ const imgFour = document.querySelector('img:nth-child(4)');
 const imgFive = document.querySelector('img:nth-child(5)');
 
 const oneImg = () => {
-  console.log(1);
   imgFive.classList.remove('one');
   imgOne.classList.remove('two');
   imgOne.classList.add('one');
