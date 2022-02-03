@@ -32,3 +32,4 @@ Modify : CSS 자잘한 간격 안맞는부분 수정  (20220202 용현)
 Add : mypage 추가(20220203 슬비)
 
 Add : mainpage 혼자 작업한 버전 추가(20220203 민주)
+Add : mainpage nave-bar 추가 (20220204 용현)

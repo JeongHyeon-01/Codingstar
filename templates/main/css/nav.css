@@ -107,8 +107,8 @@ nav .nav__logo a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 55px;
-  right: 20px;
+  top: 57px;
+  right: 18px;
   z-index: 2;
   width: 230px;
   height: 185px;
@@ -145,8 +145,8 @@ nav .nav__logo a {
 
 .tap {
   position: fixed;
-  right: 57px;
-  top: 48px;
+  right: 47px;
+  top: 50px;
   width: 14px;
   height: 14px;
   -webkit-transform: rotate(45deg);
