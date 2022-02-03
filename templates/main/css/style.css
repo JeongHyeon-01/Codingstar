@@ -1,0 +1,612 @@
+@import "reset.css";
+
+/* Global */
+:root {
+    /* Color */
+    --color-light-grey: #FAFAFA;
+    --color-blue : #0095f6;
+    --color-grey : rgba(219, 219, 219, 1);
+    
+    /* Font size */
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 500;
+    --weight-regular: 400;
+
+    --border : 1px solid var(--color-grey);
+
+    /* Size */
+    --img-size-lg : 56px;
+    --img-size-s : 32px;
+}
+
+/* Universal tags */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    cursor: default;
+    background-color: var(--color-light-grey);
+    height: 1000vh;
+}
+
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border:none;
+    outline: none;
+}
+
+img {
+    width: 56px;
+    height: 56px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: none;
+}
+
+
+/* Typography */
+
+
+/* temporary nav bar */
+nav{
+    width: 199%;
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    z-index: 4;
+}
+
+
+main{
+    width: 935px;
+    position: relative;
+    top: 60px;
+    padding-top: 30px;
+    margin: 0 auto;
+    display: flex;
+    height: auto;
+}
+
+.main__left{
+    margin-right: 28px;
+    max-width: 614px;
+    width: 100%;
+}
+
+
+.main__right{
+    left: 890px; 
+    position: fixed;
+    top: cal(34px+ 60px);
+    max-width: 293px;
+    width: 100%;
+    padding: 0px 0px 30px;
+}
+
+/* story */
+#story {
+    background-color: white;
+    width: 614px;
+    height: 118px;
+    border-radius: 3px;
+    margin-bottom: 24px;
+    margin-top: 0;
+    padding: 16px 0;;
+    border: var(--border);
+    position: relative;
+}
+
+.story__container{
+    display: flex;
+    justify-content: stretch;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+} 
+
+.story__container:first-child {
+    margin-left: 15px;
+}
+
+.story__item{
+    width: 80px;
+    padding: 0 4px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.story__item__img{
+    border-radius: 50%;
+}
+
+
+.story__item__id span{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    color: #262626;
+    display: block;
+    line-height: 16px;
+    max-width: 64px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    top: 68px;
+    left: 6px;
+    white-space: nowrap;
+}
+
+.right__arrow, .left__arrow{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 45px;
+    
+}
+
+.fa-chevron-circle-right, .fa-chevron-circle-left{
+    color: #E2DBD6;
+}
+
+.right__arrow{
+    right: 7px;
+}
+
+.left__arrow{
+    left: 7px;
+    display: none;
+}
+
+/* main feed */
+
+#feed{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.article{
+    margin-bottom: 24px;   
+    border: var(--border);
+    border-radius: 3px;
+}
+
+.feed__header{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__left{
+    padding: 14px 4px 14px 16px;
+    display: flex;
+    width: calc(100% - 48px);
+}
+
+.header__image{
+    width: 32px;
+    height: 32px;
+}
+
+.header__image a{
+    width: 100%;
+    height: 100%;
+}
+
+.header__image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.header__info{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 14px;
+}
+
+.header__info__id{
+    font-size: 14px;
+    padding: 2px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    width: auto;  
+}
+
+.header__info__location{
+    font-size: 12px;
+    padding: 2px;    
+}
+
+.header__right{
+    padding-right : 8px;
+    width: 48px;
+}
+
+.header__right button{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* feed content */
+.feed__picture{
+    position: relative;
+}
+
+
+.feed__picture img{
+    width: 100%;
+    height: 600px;
+}
+
+.feed__picture button{
+    color: #A8A8A8;
+    padding: 16px 8px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    justify-self: center;
+    font-size: 14px;
+    line-height: 18px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: auto;
+}
+
+.feed__picture__dots{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #A8A8A8;
+    border-radius: 50%;
+    margin-right: 4px;    
+    
+}
+
+/* icon reaction */
+.feed__icon__reaction{
+    width: 100%;
+    padding: 6px 16px 8px 16px;
+    margin: -34px 0px 0px 0px;
+    display: flex;
+    height: auto;
+    position: relative;
+
+}
+
+.feed__icon{
+    padding: 8px;
+    width:40px;
+    height: 40px;
+}
+
+.feed__icon:last-child{
+    margin: 0px -10px 0px 426px;
+}
+
+.feed__icon i{
+    font-size: 22px;
+}
+
+/* ___외 00명이 좋아합니다. */
+.feed__likes{
+    padding: 0px 16px;
+    margin: 0px 0px 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.feed__likes__profile__container{
+    overflow: hidden;
+    display: inline;
+}
+
+.feed__likes__profile{
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+}
+
+.feed__likes__profile img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 16px;
+}
+
+.feed__likes__profile__continer span:nth-child(2){
+    transform: translateX(-50%);
+}
+
+.feed__likes__number{
+    font-size: 14px;
+}
+
+.feed__likes__number a:first-child{
+    margin: -5px;
+    padding: 5px;
+}
+
+.feed__likes__number a {
+    font-weight: 600;
+}
+
+/* 글 & 코멘트 */
+
+.feed__post-comment__container{
+    padding: 0px 16px;
+    font-size: 14px;
+}
+
+.feed__post__id{
+    font-weight: 600;
+}
+
+.feed__post__contenet{
+    overflow-wrap: break-word;
+    white-space: nowrap;
+}
+
+.feed__post__more button{
+    color: #8E8E8E;
+    padding: 0;
+}
+
+.feed__post, .feed__post__more-comments, .feed__comment{
+    margin-bottom: 4px;
+}
+
+.feed__post__more-comments a{
+    color: #8E8E8E;
+}
+
+.feed__comment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+  
+
+
+.feed__comment__left a{
+    font-weight: 600;
+    margin: -5px;
+    padding: 0px 5px;
+}
+
+.feed__comment__left span{
+    overflow-wrap: break-word;
+}
+
+
+/* 댓글 창 */
+
+.feed__comment-form__container{
+    padding: 6px 16px;
+}
+
+.feed__comment-form form{
+    display: flex;
+}
+
+.feed__comment-form button:first-child{
+    padding: 8px 16px 8px 0;
+}
+
+.feed__comment-form button>i{
+    font-size: 22px;
+}
+
+.feed__comment-form input{
+    flex-grow: 2;
+    padding: 0;
+    margin: 0;
+    outline: none   ;
+    border-style: none;
+}
+
+.feed__comment-form button:last-child{
+    padding: 0;
+    opacity: 0.3;
+    color: var(--color-blue);
+    display: inline-block;
+    width: auto;
+}
+
+/* ### main__right ### */
+
+.my-profile{
+    margin-bottom: 10px;
+    margin-top: 18px;
+    height: auto;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.my-profile img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.my-profile div{
+    flex: 1 1 auto;
+}
+
+.my-profile a{
+    width: 18px;
+    margin-left: 12px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.my-profile button:last-child {
+    padding: 0;
+    color: var(--color-blue);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+/* recommendations */
+.recommendations{
+    margin: 12px 0px 12px -16px;
+    width: calc(100% + 32px);
+}
+
+.recommendation__for-you{
+    padding: 16px 16px 0px 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommendation__for-you{
+    font-size: 14px;
+    color: #8E8E8E;
+    margin: -3px 0px -4px;
+    font-weight: 600;
+}
+
+.recommendation__for-you a{
+    font-size: 12px;
+    color: #262626;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* /* recommendation items */
+
+.recommendation__items{
+    padding: 8px 0px;
+    align-items: center;
+}
+
+.recommendation__item__container{
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommendation__item__profile {
+    display: flex;
+    align-items: center;
+}
+
+.recommendation__item__profile>a{
+    margin-right: 12px;
+}
+
+
+.recommendation__item__profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.recommendation__item__info a{
+    display: block;
+}
+
+.recommendation__item__info a:first-child{
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+    padding-bottom: 0;
+}
+
+.recommendation__item__info a:last-child{
+    font-size: 12px;
+    color: #8E8E8E;
+    margin-top: 4px;
+    font-weight: 400;
+}
+.recommendation__item__button{
+    margin-left: 8px;
+    text-align: center;
+}
+
+.recommendation__item__button button{
+    padding: 0;
+    color: var(--color-blue);
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 12px;
+}
+
+/* infos */
+
+.infos{
+    color: #c7c7c7;
+    font-size: 11px;
+}
+
+.infos__lists{
+    margin-bottom: 16px;
+}
+
+.infos__lists li{
+    display: inline;
+}
+
+.infos__lists a{
+    color: #c7c7c7;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+/* 마지막꺼는 점을 빼야하는데, not 적용이 안됨 ㅠ 도움 급구 */
+.infos__lists__link::after{
+    content:'·';
+    margin: 0px 2.75px;
+    color: #c7c7c7;
+}
+
+
+
+@media only screen and (max-width: 700px) {  
+    .main__right {  
+      display: none;
+    } 
+  }
+
+
+
+
+
+
+
+
+
