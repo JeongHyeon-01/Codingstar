@@ -29,4 +29,6 @@ Modify : CSS 자잘한 간격 안맞는부분 수정  (20220202 용현)
  - 백엔드부분 urls.py , views.py 수정, html 파일 경로 1개 추가
  - 필요없는 console.log 삭제  
 
-Add : mypage 추가
+Add : mypage 추가(20220203 슬비)
+
+Add : mainpage 혼자 작업한 버전 추가(20220203 민주)
