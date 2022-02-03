@@ -1,0 +1,22 @@
+/* font */
+
+/* settings */
+@import "reset.css";
+@import "variables.css";
+
+/* Components */
+@import "components/main-article.css";
+@import "components/footer.css";
+@import "components/post-bar.css";
+
+/* Screens */
+@import "screens/profile.css";
+
+body {
+  background-color: var(--color-main);
+  /* 폰트 (서체, 굵기) */
+}
+
+nav {
+  background-color: white;
+}
