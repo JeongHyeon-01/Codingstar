@@ -20,6 +20,7 @@
   </head>
   <body>
     <!-- nav -->
+    <!-- nav에서 fa-plus-square 부분에다가 post_create url 연결  -->
     <nav class="nav">
       <div class="nav__logo">
         <a href="#">Instagram</a>
@@ -35,7 +36,8 @@
             <a href="#"><i class="fas fa-home"></i></a>
           </li>
           <li>
-            <a href="#"><i class="far fa-paper-plane"></i></a>
+            <a href="{% url 'main:post_create %}"><i class="far fa-paper-plane"></i></a>
+            <!-- <a href="#"><i class="far fa-paper-plane"></i></a> 기존코드 -->
           </li>
           <li>
             <a href="#"><i class="far fa-plus-square"></i></a>
