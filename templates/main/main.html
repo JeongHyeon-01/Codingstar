@@ -1,526 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram</title>
-    <link rel="icon" type="image/png" href="./img/instagram-icon.png">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="main.js" defer></script>
-    
-</head>
-<body>
-    
-    <!-- navgar goes here -->
+    <link rel="icon" type="image/png" href="./img/instagram-icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@100&display=swap" rel="stylesheet" />
+    <script src="./js/main.js" defer></script>
 
-    <nav>navbar goes here</nav>
+    <!-- Font Awesome script-->
+    <script src="./js/all.js" defer></script>
+    <script src="./js/nav.js" defer></script>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="nav">
+      <div class="nav__logo">
+        <a href="#">Instagram</a>
+      </div>
+      <div class="nav__search-bar">
+        <span class="search-bar__glass"><i class="fas fa-search"></i></span>
+        <span class="search-bar__cross"><i class="fas fa-times-circle"></i></span>
+        <input class="search-input" type="text" placeholder="검색" />
+      </div>
+      <div class="nav__list">
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-home"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-paper-plane"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-plus-square"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-compass"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-heart"></i></a>
+          </li>
+          <li class="drop-down">
+            <button><img src="img/elsa.jpeg" /></button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- nav drop down menu -->
+    <div class="tap hidden"></div>
+    <div class="drop-down__menu hidden">
+      <div class="drop-down__link">
+        <a href="#"
+          ><div>
+            <span><i class="far fa-user-circle"></i></span>프로필
+          </div></a
+        >
+        <a href="#"
+          ><div>
+            <span class="bookmark"><i class="far fa-bookmark"></i></span>저장됨
+          </div></a
+        >
+        <a href="#"
+          ><div>
+            <span><i class="fas fa-cog"></i></span>설정
+          </div></a
+        >
+        <a href="#"
+          ><div>
+            <span><i class="fas fa-sync"></i></span>계정전환
+          </div></a
+        >
+        <a href="#"><div class="logout">로그아웃</div></a>
+      </div>
+    </div>
 
     <main class="main">
-
-    <!-- main__left -->
-    <div class="main__left">
+      <!-- main__left -->
+      <div class="main__left">
         <!-- Story -->
         <section id="story">
-            <ul class="story__container">
+          <ul class="story__container">
+            <li class="story__item">
+              <button class="story__item__button">
+                <img class="story__item__img" src="img/elsa.jpeg" />
+                <div class="story__item__id">
+                  <span>winterelsa</span>
+                </div>
+              </button>
+            </li>
 
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/elsa.jpeg" />
-                        <div class="story__item__id">
-                            <span>winterelsa</span>
-                        </div>
-                    </button>
-                    
-                </li>
-               
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/spongebob.jpeg" />
-                    </button>
-                    <div class="story__item__id">
-                        <span>spongebob</span>
-                    </div>
-                </li>
+            <li class="story__item">
+              <button class="story__item__button">
+                <img class="story__item__img" src="img/spongebob.jpeg" />
+              </button>
+              <div class="story__item__id">
+                <span>spongebob</span>
+              </div>
+            </li>
 
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/cinderella.webp" />
-                    </button>
-                    <div class="story__item__id">
-                        <span>cinderella</span>
-                    </div>
-                </li>
+            <li class="story__item">
+              <button class="story__item__button">
+                <img class="story__item__img" src="img/cinderella.webp" />
+              </button>
+              <div class="story__item__id">
+                <span>cinderella</span>
+              </div>
+            </li>
 
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/mulan.webp" />
-                    </button>
-                    <div class="story__item__id">
-                        <span>mulan</span>
-                    </div>
-                </li>
+            <li class="story__item">
+              <button class="story__item__button">
+                <img class="story__item__img" src="img/mulan.webp" />
+              </button>
+              <div class="story__item__id">
+                <span>mulan</span>
+              </div>
+            </li>
 
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/rapunzel.webp">
-                    </button>
-                    <div class="story__item__id">
-                        <span>rapunzel</span>
-                    </div>
-                </li>
+            <li class="story__item">
+              <button class="story__item__button">
+                <img class="story__item__img" src="img/rapunzel.webp" />
+              </button>
+              <div class="story__item__id">
+                <span>rapunzel</span>
+              </div>
+            </li>
 
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/snowwhite.jpeg"/>
-                    </button>
-                    <div class="story__item__id">
-                        <span>snowwhite</span>
-                    </div>
-                </li>
+            <li class="story__item">
+              <button class="story__item__button">
+                <img class="story__item__img" src="img/snowwhite.jpeg" />
+              </button>
+              <div class="story__item__id">
+                <span>snowwhite</span>
+              </div>
+            </li>
 
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/elsa.jpeg" />
-                    </button>
-                    <div class="story__item__id">
-                        <span>winterelsa</span>
-                    </div>
-                </li>
-               
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/spongebob.jpeg" />
-                    </button>
-                    <div class="story__item__id">
-                        <span>spongebob</span>
-                    </div>
-                </li>
+            <li class="story__item">
+              <button class="story__item__button">
+                <img class="story__item__img" src="img/elsa.jpeg" />
+              </button>
+              <div class="story__item__id">
+                <span>winterelsa</span>
+              </div>
+            </li>
 
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/cinderella.webp" />
-                    </button>
-                    <div class="story__item__id">
-                        <span>cinderella</span>
-                    </div>
-                </li>
+            <li class="story__item">
+              <button class="story__item__button">
+                <img class="story__item__img" src="img/spongebob.jpeg" />
+              </button>
+              <div class="story__item__id">
+                <span>spongebob</span>
+              </div>
+            </li>
 
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/mulan.webp" />
-                    </button>
-                    <div class="story__item__id">
-                        <span>mulan</span>
-                    </div>
-                </li>
+            <li class="story__item">
+              <button class="story__item__button">
+                <img class="story__item__img" src="img/cinderella.webp" />
+              </button>
+              <div class="story__item__id">
+                <span>cinderella</span>
+              </div>
+            </li>
 
-            </ul>
-            <div class="right__arrow">
-                <button>
-                    <i class="fas fa-chevron-circle-right fa-2x"></i>
-                </button>
-            </div>
+            <li class="story__item">
+              <button class="story__item__button">
+                <img class="story__item__img" src="img/mulan.webp" />
+              </button>
+              <div class="story__item__id">
+                <span>mulan</span>
+              </div>
+            </li>
+          </ul>
+          <div class="right__arrow">
+            <button>
+              <i class="fas fa-chevron-circle-right fa-2x"></i>
+            </button>
+          </div>
 
-            <div class="left__arrow">
-                <button>
-                    <i class="fas fa-chevron-circle-left fa-2x"></i>
-                </button>
-            </div>
-
-
+          <div class="left__arrow">
+            <button>
+              <i class="fas fa-chevron-circle-left fa-2x"></i>
+            </button>
+          </div>
         </section>
-        
-        
+
         <!-- Main feed -->
         <section id="feed">
-
-            <!-- article 1 -->
-            <article class="article">
-
-                <!-- header -->
-                <header class="feed__header">
-                    <div class="header__left">
-                        <div class="header__image">
-                            <a href="#">
-                                <img src="img/elsa.jpeg"/>
-                            </a>
-                        </div>
-                        <div class="header__info">
-                            <a href="#" class="header__info__id">winterelsa</a>
-                            <a href="#" class="header__info__location">겨울왕국</a>
-                        </div>
-                    </div>
-                    <div class="header__right">
-                        <button>
-                        <i class="fas fa-ellipsis-h"></i>
-                        </button>
-                    </div>
-                </header>
-                
-                <!-- feed content -->
-                <div class="main__feed__picture">
-                  <div class="feed__picture">
-                    <img src="img/icecream.webp">
-                    <button class="next__picture">
-                        <i class="fas fa-chevron-circle-right fa-2x"></i>
-                    </button>
-                  </div>
-                  <div class="feed__picture__dots">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                 </div>
+          <!-- article 1 -->
+          <article class="article">
+            <!-- header -->
+            <header class="feed__header">
+              <div class="header__left">
+                <div class="header__image">
+                  <a href="#">
+                    <img src="img/elsa.jpeg" />
+                  </a>
                 </div>
-
-                <!-- reaction buttons -->
-                <section class="feed__icon__reaction">
-                    <button class="feed__icon">
-                        <i class="far fa-heart"></i>
-                    </button> 
-                    <button class="feed__icon">
-                        <i class="far fa-comment"></i>
-                    </button>
-                    <button class="feed__icon">
-                       <i class="far fa-paper-plane"></i>
-                    </button>
-                    <button class="feed__icon">
-                        <i class="far fa-bookmark"></i>
-                    </button>
- -              </section>
-
-                <!-- ___외 00명이 좋아합니다. -->
-                <section class="feed__likes">
-                    <div class="feed__likes__profile__container">
-                        <span class="feed__likes__profile">
-                            <img src="img/spongebob.jpeg">
-                        </span>
-                        <span class="feed__likes__profile">
-                            <img src="img/sleepingbeauty.jpeg">
-                        </span>
-                        <span class="feed__likes__profile">
-                            <img src="img/snowwhite.jpeg">
-                        </span>
-                    </div>
-                    <span class="feed__likes__number">
-                        <a href="#">spongebob</a>님 
-                        <a href="#">외 <span>41</span>명</a>이 좋아합니다
-                    </span>
-                </section>
-
-                <!-- 글 & 코멘트 -->
-                <section class="feed__post-comment__container">
-                    <div class="feed__post">
-                        <span class="feed__post__id"><a>winterelsa</a></span>
-                        <span class="feed__post__content">슈팅스타 대존맛🥰
-                            <span class="feed__post__more">
-                                <span>...
-                                    <button>더 보기</button>
-                                </span>
-                            </span>
-                        </span>
-                        
-                    </div>
-                    <div class="feed__post__more-comments">
-                        <a href="#">댓글 <span>31</span>개 모두 보기</a>
-                    </div>
-                    
-                    <div class="feed__comment">
-                        <div class="feed__comment__left">
-                            <a href="#">spongebob</a>
-                            <span>코딩스타 화이팅~~!!</span>
-                        </div>
-                        <span>
-                            <button><i class="far fa-heart"></i></button>
-                        </span>
-                    </div>
-                    
-                    <div class="feed__comment">
-                        <div class="feed__comment__left">
-                            <a href="#">snowwhite</a>
-                            <span>전 입속에서 그 튀는거 싫어요 ㅠ.ㅠ 전 엄마는 외계인으로 주세요</span>
-                        </div>
-                        <span>
-                            <button><i class="far fa-heart"></i></button>
-                        </span>
-                    </div>
-                </section>
-
-
-                <!-- 댓글 창 -->
-                <section class="feed__comment-form__container">
-                    <div class="feed__comment-form">
-                        <form>
-                            <button>
-                                <i class="far fa-smile"></i>
-                            </button>
-                            <input type="text" placeholder="댓글 달기..."/>
-                            <button>게시</button>                            
-                        </form>
-                    </div>
-                </section>
-            </article>
-
-            <!-- article 2 -->
-            <article class="article">
-
-                <!-- header -->
-                <header class="feed__header">
-                    <div class="header__left">
-                        <div class="header__image">
-                            <a href="#">
-                                <img src="img/elsa.jpeg"/>
-                            </a>
-                        </div>
-                        <div class="header__info">
-                            <a href="#" class="header__info__id">winterelsa</a>
-                            <a href="#" class="header__info__location">겨울왕국</a>
-                        </div>
-                    </div>
-                    <div class="header__right">
-                        <button>
-                        <i class="fas fa-ellipsis-h"></i>
-                        </button>
-                    </div>
-                </header>
-                
-                <!-- feed content -->
-                <div class="main__feed__picture">
-                  <div class="feed__picture">
-                    <img src="img/icecream.webp">
-                    <button class="next__picture">
-                        <i class="fas fa-chevron-circle-right fa-2x"></i>
-                    </button>
-                  </div>
-                  <div class="feed__picture__dots">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                 </div>
+                <div class="header__info">
+                  <a href="#" class="header__info__id">winterelsa</a>
+                  <a href="#" class="header__info__location">겨울왕국</a>
                 </div>
+              </div>
+              <div class="header__right">
+                <button>
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+            </header>
 
-                <!-- reaction buttons -->
-                <section class="feed__icon__reaction">
-                    <button class="feed__icon">
-                        <i class="far fa-heart"></i>
-                    </button> 
-                    <button class="feed__icon">
-                        <i class="far fa-comment"></i>
-                    </button>
-                    <button class="feed__icon">
-                       <i class="far fa-paper-plane"></i>
-                    </button>
-                    <button class="feed__icon">
-                        <i class="far fa-bookmark"></i>
-                    </button>
- -              </section>
+            <!-- feed content -->
+            <div class="main__feed__picture">
+              <div class="feed__picture">
+                <img src="img/icecream.webp" />
+                <button class="next__picture">
+                  <i class="fas fa-chevron-circle-right fa-2x"></i>
+                </button>
+              </div>
+              <div class="feed__picture__dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
 
-                <!-- ___외 00명이 좋아합니다. -->
-                <section class="feed__likes">
-                    <div class="feed__likes__profile__container">
-                        <span class="feed__likes__profile">
-                            <img src="img/spongebob.jpeg">
-                        </span>
-                        <span class="feed__likes__profile">
-                            <img src="img/sleepingbeauty.jpeg">
-                        </span>
-                        <span class="feed__likes__profile">
-                            <img src="img/snowwhite.jpeg">
-                        </span>
-                    </div>
-                    <span class="feed__likes__number">
-                        <a href="#">spongebob</a>님 
-                        <a href="#">외 <span>41</span>명</a>이 좋아합니다
+            <!-- reaction buttons -->
+            <section class="feed__icon__reaction">
+              <button class="feed__icon">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="feed__icon">
+                <i class="far fa-comment"></i>
+              </button>
+              <button class="feed__icon">
+                <i class="far fa-paper-plane"></i>
+              </button>
+              <button class="feed__icon">
+                <i class="far fa-bookmark"></i>
+              </button>
+              -
+            </section>
+
+            <!-- ___외 00명이 좋아합니다. -->
+            <section class="feed__likes">
+              <div class="feed__likes__profile__container">
+                <span class="feed__likes__profile">
+                  <img src="img/spongebob.jpeg" />
+                </span>
+                <span class="feed__likes__profile">
+                  <img src="img/sleepingbeauty.jpeg" />
+                </span>
+                <span class="feed__likes__profile">
+                  <img src="img/snowwhite.jpeg" />
+                </span>
+              </div>
+              <span class="feed__likes__number">
+                <a href="#">spongebob</a>님 <a href="#">외 <span>41</span>명</a>이 좋아합니다
+              </span>
+            </section>
+
+            <!-- 글 & 코멘트 -->
+            <section class="feed__post-comment__container">
+              <div class="feed__post">
+                <span class="feed__post__id"><a>winterelsa</a></span>
+                <span class="feed__post__content"
+                  >슈팅스타 대존맛🥰
+                  <span class="feed__post__more">
+                    <span
+                      >...
+                      <button>더 보기</button>
                     </span>
-                </section>
+                  </span>
+                </span>
+              </div>
+              <div class="feed__post__more-comments">
+                <a href="#">댓글 <span>31</span>개 모두 보기</a>
+              </div>
 
-                <!-- 글 & 코멘트 -->
-                <section class="feed__post-comment__container">
-                    <div class="feed__post">
-                        <span class="feed__post__id"><a>winterelsa</a></span>
-                        <span class="feed__post__content">슈팅스타 대존맛🥰
-                            <span class="feed__post__more">
-                                <span>...
-                                    <button>더 보기</button>
-                                </span>
-                            </span>
-                        </span>
-                        
-                    </div>
-                    <div class="feed__post__more-comments">
-                        <a>댓글 <span>31</span>개 모두 보기</a>
-                    </div>
-                    
-                    <div class="feed__comment">
-                        <div class="feed__comment__left">
-                            <a href="#">spongebob</a>
-                            <span>코딩스타 화이팅~~!!</span>
-                        </div>
-                        <span>
-                            <button><i class="far fa-heart"></i></button>
-                        </span>
-                    </div>
-                    
-                    <div class="feed__comment">
-                        <div class="feed__comment__left">
-                            <a href="#">snowwhite</a>
-                            <span>전 입속에서 그 튀는거 싫어요 ㅠ.ㅠ 전 엄마는 외계인으로 주세요</span>
-                        </div>
-                        <span>
-                            <button><i class="far fa-heart"></i></button>
-                        </span>
-                    </div>
-                </section>
+              <div class="feed__comment">
+                <div class="feed__comment__left">
+                  <a href="#">spongebob</a>
+                  <span>코딩스타 화이팅~~!!</span>
+                </div>
+                <span>
+                  <button><i class="far fa-heart"></i></button>
+                </span>
+              </div>
 
+              <div class="feed__comment">
+                <div class="feed__comment__left">
+                  <a href="#">snowwhite</a>
+                  <span>전 입속에서 그 튀는거 싫어요 ㅠ.ㅠ 전 엄마는 외계인으로 주세요</span>
+                </div>
+                <span>
+                  <button><i class="far fa-heart"></i></button>
+                </span>
+              </div>
+            </section>
 
-                <!-- 댓글 창 -->
-                <section class="feed__comment-form__container">
-                    <div class="feed__comment-form">
-                        <form>
-                            <button>
-                                <i class="far fa-smile"></i>
-                            </button>
-                            <input type="text" placeholder="댓글 달기..."/>
-                            <button>게시</button>
-                        </form>
-                    </div>
-                </section>
-            </article>
+            <!-- 댓글 창 -->
+            <section class="feed__comment-form__container">
+              <div class="feed__comment-form">
+                <form>
+                  <button>
+                    <i class="far fa-smile"></i>
+                  </button>
+                  <input type="text" placeholder="댓글 달기..." />
+                  <button>게시</button>
+                </form>
+              </div>
+            </section>
+          </article>
 
+          <!-- article 2 -->
+          <article class="article">
+            <!-- header -->
+            <header class="feed__header">
+              <div class="header__left">
+                <div class="header__image">
+                  <a href="#">
+                    <img src="img/elsa.jpeg" />
+                  </a>
+                </div>
+                <div class="header__info">
+                  <a href="#" class="header__info__id">winterelsa</a>
+                  <a href="#" class="header__info__location">겨울왕국</a>
+                </div>
+              </div>
+              <div class="header__right">
+                <button>
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+            </header>
+
+            <!-- feed content -->
+            <div class="main__feed__picture">
+              <div class="feed__picture">
+                <img src="img/icecream.webp" />
+                <button class="next__picture">
+                  <i class="fas fa-chevron-circle-right fa-2x"></i>
+                </button>
+              </div>
+              <div class="feed__picture__dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+
+            <!-- reaction buttons -->
+            <section class="feed__icon__reaction">
+              <button class="feed__icon">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="feed__icon">
+                <i class="far fa-comment"></i>
+              </button>
+              <button class="feed__icon">
+                <i class="far fa-paper-plane"></i>
+              </button>
+              <button class="feed__icon">
+                <i class="far fa-bookmark"></i>
+              </button>
+              -
+            </section>
+
+            <!-- ___외 00명이 좋아합니다. -->
+            <section class="feed__likes">
+              <div class="feed__likes__profile__container">
+                <span class="feed__likes__profile">
+                  <img src="img/spongebob.jpeg" />
+                </span>
+                <span class="feed__likes__profile">
+                  <img src="img/sleepingbeauty.jpeg" />
+                </span>
+                <span class="feed__likes__profile">
+                  <img src="img/snowwhite.jpeg" />
+                </span>
+              </div>
+              <span class="feed__likes__number">
+                <a href="#">spongebob</a>님 <a href="#">외 <span>41</span>명</a>이 좋아합니다
+              </span>
+            </section>
+
+            <!-- 글 & 코멘트 -->
+            <section class="feed__post-comment__container">
+              <div class="feed__post">
+                <span class="feed__post__id"><a>winterelsa</a></span>
+                <span class="feed__post__content"
+                  >슈팅스타 대존맛🥰
+                  <span class="feed__post__more">
+                    <span
+                      >...
+                      <button>더 보기</button>
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <div class="feed__post__more-comments">
+                <a>댓글 <span>31</span>개 모두 보기</a>
+              </div>
+
+              <div class="feed__comment">
+                <div class="feed__comment__left">
+                  <a href="#">spongebob</a>
+                  <span>코딩스타 화이팅~~!!</span>
+                </div>
+                <span>
+                  <button><i class="far fa-heart"></i></button>
+                </span>
+              </div>
+
+              <div class="feed__comment">
+                <div class="feed__comment__left">
+                  <a href="#">snowwhite</a>
+                  <span>전 입속에서 그 튀는거 싫어요 ㅠ.ㅠ 전 엄마는 외계인으로 주세요</span>
+                </div>
+                <span>
+                  <button><i class="far fa-heart"></i></button>
+                </span>
+              </div>
+            </section>
+
+            <!-- 댓글 창 -->
+            <section class="feed__comment-form__container">
+              <div class="feed__comment-form">
+                <form>
+                  <button>
+                    <i class="far fa-smile"></i>
+                  </button>
+                  <input type="text" placeholder="댓글 달기..." />
+                  <button>게시</button>
+                </form>
+              </div>
+            </section>
+          </article>
         </section>
-        
-    </div>
+      </div>
 
-    <!-- main__right -->
-    <div class="main__right">
+      <!-- main__right -->
+      <div class="main__right">
         <!-- Recommendation -->
         <section id="recommendation">
-            
-            <div class="my-profile">
-                    <button class="my-profile__img">
-                        <img src="img/elsa.jpeg">
-                    </button>
-                    <div>
-                    <a href="#">elsawinter</a>
-                    </div>
-                    <button>전환</button>
+          <div class="my-profile">
+            <button class="my-profile__img">
+              <img src="img/elsa.jpeg" />
+            </button>
+            <div>
+              <a href="#">elsawinter</a>
+            </div>
+            <button>전환</button>
+          </div>
+
+          <div class="recommendations">
+            <div class="recommendation__for-you">
+              <div>회원님을 위한 추천</div>
+              <a href="#">모두 보기</a>
             </div>
 
-            <div class="recommendations">
-                <div class="recommendation__for-you">
-                    <div>회원님을 위한 추천</div>
-                    <a href="#">모두 보기</a>    
+            <div class="recommendation__items">
+              <!-- item 1 -->
+              <div class="recommendation__item__container">
+                <div class="recommendation__item__profile">
+                  <a href="#">
+                    <img src="img/mulan.webp" />
+                  </a>
+                  <div class="recommendation__item__info">
+                    <a href="#">mulan</a>
+                    <a href="#">whitesnow님이 팔로우합니다</a>
+                  </div>
                 </div>
 
-                <div class="recommendation__items">
+                <div class="recommendation__item__button">
+                  <button>팔로우</button>
+                </div>
+              </div>
 
-                    <!-- item 1 -->
-                    <div class="recommendation__item__container">
-                        <div class="recommendation__item__profile">
-                            <a href="#">
-                                <img src="img/mulan.webp">
-                            </a>                   
-                            <div class="recommendation__item__info">
-                                <a href="#">mulan</a>
-                                <a href="#">whitesnow님이 팔로우합니다</a>
-                            </div>
-                        </div> 
-                    
-                        <div class="recommendation__item__button">
-                            <button>팔로우</button>
-                        </div>
-                    </div>
+              <!-- item 2 -->
+              <div class="recommendation__item__container">
+                <div class="recommendation__item__profile">
+                  <a href="#">
+                    <img src="img/mulan.webp" />
+                  </a>
+                  <div class="recommendation__item__info">
+                    <a href="#">mulan</a>
+                    <a href="#">whitesnow님이 팔로우합니다</a>
+                  </div>
+                </div>
 
+                <div class="recommendation__item__button">
+                  <button>팔로우</button>
+                </div>
+              </div>
 
-                    <!-- item 2 -->
-                    <div class="recommendation__item__container">
-                        <div class="recommendation__item__profile">
-                            <a href="#">
-                                <img src="img/mulan.webp">
-                            </a>                   
-                            <div class="recommendation__item__info">
-                                <a href="#">mulan</a>
-                                <a href="#">whitesnow님이 팔로우합니다</a>
-                            </div>
-                        </div> 
-                    
-                        <div class="recommendation__item__button">
-                            <button>팔로우</button>
-                        </div>
-                    </div>
+              <div class="recommendation__item__container">
+                <div class="recommendation__item__profile">
+                  <a href="#">
+                    <img src="img/mulan.webp" />
+                  </a>
+                  <div class="recommendation__item__info">
+                    <a href="#">mulan</a>
+                    <a href="#">whitesnow님이 팔로우합니다</a>
+                  </div>
+                </div>
 
-                    <div class="recommendation__item__container">
-                        <div class="recommendation__item__profile">
-                            <a href="#">
-                                <img src="img/mulan.webp">
-                            </a>                   
-                            <div class="recommendation__item__info">
-                                <a href="#">mulan</a>
-                                <a href="#">whitesnow님이 팔로우합니다</a>
-                            </div>
-                        </div> 
-                    
-                        <div class="recommendation__item__button">
-                            <button>팔로우</button>
-                        </div>
-                    </div>
+                <div class="recommendation__item__button">
+                  <button>팔로우</button>
+                </div>
+              </div>
 
-                    <div class="recommendation__item__container">
-                        <div class="recommendation__item__profile">
-                            <a href="#">
-                                <img src="img/mulan.webp">
-                            </a>                   
-                            <div class="recommendation__item__info">
-                                <a href="#">mulan</a>
-                                <a href="#">whitesnow님이 팔로우합니다</a>
-                            </div>
-                        </div> 
-                    
-                        <div class="recommendation__item__button">
-                            <button>팔로우</button>
-                        </div>
-                    </div>
+              <div class="recommendation__item__container">
+                <div class="recommendation__item__profile">
+                  <a href="#">
+                    <img src="img/mulan.webp" />
+                  </a>
+                  <div class="recommendation__item__info">
+                    <a href="#">mulan</a>
+                    <a href="#">whitesnow님이 팔로우합니다</a>
+                  </div>
+                </div>
 
-                    <div class="recommendation__item__container">
-                        <div class="recommendation__item__profile">
-                            <a href="#">
-                                <img src="img/mulan.webp">
-                            </a>                   
-                            <div class="recommendation__item__info">
-                                <a href="#">mulan</a>
-                                <a href="#">whitesnow님이 팔로우합니다</a>
-                            </div>
-                        </div> 
-                    
-                        <div class="recommendation__item__button">
-                            <button>팔로우</button>
-                        </div>
-                    </div>
-                
+                <div class="recommendation__item__button">
+                  <button>팔로우</button>
+                </div>
+              </div>
 
-                
-                </div>     
+              <div class="recommendation__item__container">
+                <div class="recommendation__item__profile">
+                  <a href="#">
+                    <img src="img/mulan.webp" />
+                  </a>
+                  <div class="recommendation__item__info">
+                    <a href="#">mulan</a>
+                    <a href="#">whitesnow님이 팔로우합니다</a>
+                  </div>
+                </div>
+
+                <div class="recommendation__item__button">
+                  <button>팔로우</button>
+                </div>
+              </div>
             </div>
-            <div class="infos">
-                <ul class="infos__lists">
-                    <li><a class="infos__lists__link">소개</a></li>
-                    <li><a class="infos__lists__link">도움말</a></li>
-                    <li><a class="infos__lists__link">홍보 센터</a></li>
-                    <li><a class="infos__lists__link">API</a></li>
-                    <li><a class="infos__lists__link">채용 정보</a></li>
-                    <li><a class="infos__lists__link">개인정보처리방침</a></li>
-                    <li><a class="infos__lists__link">약관</a></li>
-                    <li><a class="infos__lists__link">위치</a></li>
-                    <li><a class="infos__lists__link">인기 계정</a></li>
-                    <li><a class="infos__lists__link">해시태그</a></li>
-                    <li><a class="infos__lists__link">언어</a></li>            
-                </ul>
-                <div class="infos__rights-reserved">2022 INSTAGRAM FROM META</div>
-            </div>
+          </div>
+          <div class="infos">
+            <ul class="infos__lists">
+              <li><a class="infos__lists__link">소개</a></li>
+              <li><a class="infos__lists__link">도움말</a></li>
+              <li><a class="infos__lists__link">홍보 센터</a></li>
+              <li><a class="infos__lists__link">API</a></li>
+              <li><a class="infos__lists__link">채용 정보</a></li>
+              <li><a class="infos__lists__link">개인정보처리방침</a></li>
+              <li><a class="infos__lists__link">약관</a></li>
+              <li><a class="infos__lists__link">위치</a></li>
+              <li><a class="infos__lists__link">인기 계정</a></li>
+              <li><a class="infos__lists__link">해시태그</a></li>
+              <li><a class="infos__lists__link">언어</a></li>
+            </ul>
+            <div class="infos__rights-reserved">2022 INSTAGRAM FROM META</div>
+          </div>
         </section>
-    </div>
+      </div>
     </main>
 
     <script src="https://kit.fontawesome.com/b2df5a4a7b.js" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>

@@ -1,32 +1,33 @@
+const email = document.getElementById('email');
+const password = document.getElementById('password');
 const id = document.getElementById('id');
-const pw = document.getElementById('pw');
-const nickname = document.getElementById('nickname');
 const hit = document.querySelector('.input-pw');
-const loginBtn = document.getElementById('login');
+const btn = document.getElementById('btn');
+const name = document.getElementById('name');
 //* ---------------------------------------------------------------------
 //아이디 1글자, 닉네임 1글자, 비밀번호 5글자 이상 입력했을때만 로그인 버튼 활성화
 function doAble() {
+  const emailValue = email.value;
+  const pwValue = password.value;
   const idValue = id.value;
-  const pwValue = pw.value;
-  const nickValue = nickname.value;
 
-  if (idValue.length >= 1 && nickValue.length >= 1 && pwValue.length > 5) {
-    loginBtn.disabled = false;
-    loginBtn.style.cursor = 'pointer';
+  if (emailValue.length >= 1 && idValue.length >= 1 && pwValue.length > 5) {
+    btn.disabled = false;
+    btn.style.cursor = 'pointer';
   } else {
-    loginBtn.disabled = true;
-    loginBtn.style.cursor = 'default';
+    btn.disabled = true;
+    btn.style.cursor = 'default';
   }
 }
 
+email.addEventListener('keyup', doAble);
 id.addEventListener('keyup', doAble);
-nickname.addEventListener('keyup', doAble);
-pw.addEventListener('keyup', doAble);
+password.addEventListener('keyup', doAble);
 
 //* ---------------------------------------------------------------------
 // 실제 인스타그램 처럼 비밀번호 1글자 이상 쳤을시 비밀번호 표시 버튼 보이기
-pw.addEventListener('keyup', () => {
-  const pwValue = pw.value;
+password.addEventListener('keyup', () => {
+  const pwValue = password.value;
   if (pwValue.length >= 1) {
     hit.classList.remove('hidden');
   } else {
@@ -40,14 +41,42 @@ pw.addEventListener('keyup', () => {
 let isTrue = true;
 hit.addEventListener('click', () => {
   if (isTrue) {
-    pw.setAttribute('type', 'text');
+    password.setAttribute('type', 'text');
     hit.textContent = '숨기기';
     isTrue = false;
   } else {
-    pw.setAttribute('type', 'password');
+    password.setAttribute('type', 'password');
     hit.textContent = '비밀번호 표시';
     isTrue = true;
   }
 });
 
 //* ---------------------------------------------------------------------
+// 회원가입 api 연결
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const req = {
+    email: email.value,
+    name: name.value,
+    id: id.value,
+    password: password.value,
+  };
+  console.log('사용자정보', req);
+
+  fetch('백엔드 API 주소', {
+    method: 'POST',
+    body: JSON.stringify(req),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.success) {
+        location.href = '/login';
+      } else {
+        alert(res.msg);
+      }
+    })
+    .catch((err) => {
+      console.error('회원가입 실패');
+    });
+});
