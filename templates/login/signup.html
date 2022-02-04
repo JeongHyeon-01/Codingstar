@@ -34,10 +34,9 @@
       <div></div>
       <!-- main form-->
       <main class="main">
-
         <!-- signup form 시작 -->
         <!-- signup form 변수: phone_number, email, name, id, password -->
-        <form class="main-form" method="POST">
+        <form class="main-form">
           <h1>Instagram</h1>
           <h2>친구들의 사진과 동영상을 보려면 가입하세요.</h2>
           <div class="main-form__fb">
@@ -54,21 +53,21 @@
             <div class="or-line"></div>
           </div>
           <div class="main-form__input">
-            <label> <input id="id" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>휴대폰 번호 또는 이메일 주소</span></label>
+            <label> <input id="email" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>휴대폰 번호 또는 이메일 주소</span></label>
           </div>
 
           <div class="main-form__input">
             <label> <input id="name" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>성명</span></label>
           </div>
           <div class="main-form__input">
-            <label><input id="nickname" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>사용자 이름</span></label>
+            <label><input id="id" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>사용자 이름</span></label>
           </div>
           <div class="main-form__input">
-            <label><input id="pw" type="password" autocomplete="off" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
+            <label><input id="password" type="password" autocomplete="off" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
             <div class="input-pw hidden">비밀번호 표시</div>
           </div>
           <div class="main-form_btn">
-            <button id="login" disabled type="submit">가입</button>
+            <button id="btn" disabled type="submit">가입</button>
           </div>
         </form>
         <!-- signup form 끝나는 지점 -->

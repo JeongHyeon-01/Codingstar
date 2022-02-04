@@ -1,28 +1,28 @@
 const id = document.getElementById('id');
-const pw = document.getElementById('pw');
+const password = document.getElementById('password');
 const hit = document.querySelector('.input-pw');
-const loginBtn = document.getElementById('login');
+const btn = document.getElementById('btn');
 //* ---------------------------------------------------------------------
 //아이디 1글자 비밀번호 5글자 이상 입력했을때만 로그인 버튼 활성화
 function doAble() {
   const idValue = id.value;
-  const pwValue = pw.value;
+  const pwValue = password.value;
   if (idValue.length >= 1 && pwValue.length > 5) {
-    loginBtn.disabled = false;
-    loginBtn.style.cursor = 'pointer';
+    btn.disabled = false;
+    btn.style.cursor = 'pointer';
   } else {
-    loginBtn.disabled = true;
-    loginBtn.style.cursor = 'default';
+    btn.disabled = true;
+    btn.style.cursor = 'default';
   }
 }
 
 id.addEventListener('keyup', doAble);
-pw.addEventListener('keyup', doAble);
+password.addEventListener('keyup', doAble);
 
 //* ---------------------------------------------------------------------
 // 실제 인스타그램 처럼 비밀번호 1글자 이상 쳤을시 비밀번호 표시 버튼 보이기
-pw.addEventListener('keyup', () => {
-  const pwValue = pw.value;
+password.addEventListener('keyup', () => {
+  const pwValue = password.value;
   if (pwValue.length >= 1) {
     hit.classList.remove('hidden');
   } else {
@@ -36,11 +36,11 @@ pw.addEventListener('keyup', () => {
 let isTrue = true;
 hit.addEventListener('click', () => {
   if (isTrue) {
-    pw.setAttribute('type', 'text');
+    password.setAttribute('type', 'text');
     hit.textContent = '숨기기';
     isTrue = false;
   } else {
-    pw.setAttribute('type', 'password');
+    password.setAttribute('type', 'password');
     hit.textContent = '비밀번호 표시';
     isTrue = true;
   }
@@ -95,3 +95,30 @@ const fiveImg = () => {
 
 oneImg();
 setInterval(oneImg, 25000);
+
+//* ---------------------------------------------------------------------
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const req = {
+    id: id.value,
+    password: password.value,
+  };
+  console.log('사용자정보', req);
+
+  fetch('백엔드 API 주소', {
+    method: 'POST',
+    body: JSON.stringify(req),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.success) {
+        location.href = '/main';
+      } else {
+        alert(res.msg);
+      }
+    })
+    .catch((err) => {
+      console.error('로그인 실패');
+    });
+});

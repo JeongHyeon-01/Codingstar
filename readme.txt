@@ -33,3 +33,5 @@ Add : mypage 추가(20220203 슬비)
 
 Add : mainpage 혼자 작업한 버전 추가(20220203 민주)
 Add : mainpage nave-bar 추가 (20220204 용현)
+
+Add : 회원가입, 로그인 페이지 백엔드 통신 fetch 함수 추가 (20220204 용현)
