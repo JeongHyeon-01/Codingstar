@@ -192,6 +192,23 @@
           </div>
         </section>
 
+
+        <!-- form을 사용해서 post를 생성한다. -->
+        <!-- 이때, form에서 submit을 누르면 "POST Method"으로 view에 전달한다. -->
+        <div class="post-create">
+          <div>
+            Create Post
+          </div>
+          <div class="form">
+            <form action="{% url 'main:post_create' %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form.as_p }}}
+              <input type="submit" value="Create">
+            </form>
+          </div>
+        </div>
+
+
         <!-- Main feed -->
         <section id="feed">
           <!-- article 1 -->
