@@ -5,18 +5,16 @@
 @import "variables.css";
 
 /* Components */
-@import "components/main-article.css";
+
 @import "components/footer.css";
-@import "components/post-bar.css";
+@import "components/nav.css";
 
 /* Screens */
 @import "screens/profile.css";
+@import "screens/post-bar.css";
+@import "screens/main-article.css";
 
 body {
   background-color: var(--color-main);
   /* 폰트 (서체, 굵기) */
-}
-
-nav {
-  background-color: white;
 }
