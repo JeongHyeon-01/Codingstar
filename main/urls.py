@@ -9,7 +9,7 @@ from . import views
 # main/1/comment_delete/ 요청이 들어오면 comment_delete
 
 urlpatterns = [
-    path('', views.Main_feed, name='Main_feed'),
+    path('main/', views.Main_feed, name='Main_feed'),
     #path('create/', views.post_create, name='post_create'),
     #path('<int:post_id>/update/', views.post_update, name='post_update'),
     #path('<int:post_id>/comment_create/', views.comment_create, name='comment_create'),
