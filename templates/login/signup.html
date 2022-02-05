@@ -11,12 +11,12 @@
 
     <!-- CSS -->
     {% load static %}
-    <link rel="stylesheet" href="{% static './css/reset.css' %}" />
-    <link rel="stylesheet" href="{% static './css/signup.css' %}" />
+    <link rel="stylesheet" href="{% static './login/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static './login/css/signup.css' %}" />
 
     <!-- JavaScript -->
-    <script defer src="./script/all.js"></script>
-    <script defer src="./script/signupscript.js"></script>
+    <script defer src="./login/script/all.js"></script>
+    <script defer src="./login/script/signupscript.js"></script>
 
     <!-- icon next to title -->
     <link rel="shortcut icon" type="image/x-icon" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico" />
@@ -36,7 +36,9 @@
       <main class="main">
         <!-- signup form 시작 -->
         <!-- signup form 변수: phone_number, email, name, id, password -->
-        <form class="main-form">
+        <form class="main-form" method="post" >
+          {% csrf_token %}
+          {% include "form_errors.html" %}
           <h1>Instagram</h1>
           <h2>친구들의 사진과 동영상을 보려면 가입하세요.</h2>
           <div class="main-form__fb">
@@ -53,17 +55,17 @@
             <div class="or-line"></div>
           </div>
           <div class="main-form__input">
-            <label> <input id="email" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>휴대폰 번호 또는 이메일 주소</span></label>
+            <label for="email"> <input id="email" type="text" value="{{ form.email.value|default_if_none:'' }}" autocomplete="off" autocapitalize="off" autocorrect="off" required value="{{ form.password1.value|default_if_none:''}}"/><span>전화번호, 사용자 이름 또는 이메일</span></label>
           </div>
 
           <div class="main-form__input">
-            <label> <input id="name" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>성명</span></label>
+            <label for="name"> <input id="name" type="text" autocomplete="off" value="{{ form.name.value|default_if_none:'' }}" autocapitalize="off" autocorrect="off" required /><span>성명</span></label>
           </div>
           <div class="main-form__input">
-            <label><input id="id" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>사용자 이름</span></label>
+            <label for="username"><input id="username" type="text" value="{{ form.username.value|default_if_none:'' }}" autocomplete="off" autocapitalize="off" autocorrect="off" required ><span>사용자 이름</span></label>
           </div>
           <div class="main-form__input">
-            <label><input id="password" type="password" autocomplete="off" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
+            <label><input id="password1" type="password"  value="{{ form.password1.value|default_if_none:'' }}" autocomplete="off" autocomplete="off" autocapitalize="off" autocorrect="off" required /><span>비밀번호</span> </label>
             <div class="input-pw hidden">비밀번호 표시</div>
           </div>
           <div class="main-form_btn">
@@ -73,7 +75,7 @@
         <!-- signup form 끝나는 지점 -->
 
         <div class="signup">
-          <p>계정이 있으신가요?<a href="{% url 'anotherlogin' %}">로그인</a></p>
+          <p>계정이 있으신가요?<a href="{% url 'signin' %}">로그인</a></p>
         </div>
         <div class="app-dn">
           <p>앱을 다운로드하세요.</p>

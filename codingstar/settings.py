@@ -121,13 +121,15 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-# 앱안에 만들었기 때문에 저기위치에는 static폴더 위치 앱이름 적어주세요
-    os.path.join(BASE_DIR, 'login', 'static'),
-    os.path.join(BASE_DIR, 'signup', 'static'),
+    BASE_DIR/'static',
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#로그인 성공후 가는페이지
+LOGIN_REDIRECT_URL = '/'
+#로그아웃은 추후 추가예정
+LOGOUT_REDIRECT_URL = '/'
