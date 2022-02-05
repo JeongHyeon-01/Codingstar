@@ -10,8 +10,8 @@ from . import views
 
 urlpatterns = [
     path('', views.Main_feed, name='Main_feed'),
-    path('create/', views.post_create, name='post_create'),
-    path('<int:post_id>/update/', views.post_update, name='post_update'),
-    path('<int:post_id>/comment_create/', views.comment_create, name='comment_create'),
-    path('<int:comment_id>/comment_delete/', views.comment_delete, name='comment_delete'),
+    #path('create/', views.post_create, name='post_create'),
+    #path('<int:post_id>/update/', views.post_update, name='post_update'),
+    #path('<int:post_id>/comment_create/', views.comment_create, name='comment_create'),
+    #path('<int:comment_id>/comment_delete/', views.comment_delete, name='comment_delete'),
 ]
