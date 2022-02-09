@@ -1,0 +1,145 @@
+/* my-profile */
+.my-profile {
+  margin-bottom: 10px;
+  margin-top: 18px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.my-profile img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.my-profile div {
+  flex: 1 1 auto;
+}
+
+.my-profile a {
+  width: 18px;
+  margin-left: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+
+.my-profile button:last-child {
+  padding: 0;
+  color: var(--color-blue);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+/* recommendations */
+.recommendations {
+  margin: 12px 0px 12px -16px;
+  width: calc(100% + 32px);
+}
+
+.recommendation__for-you {
+  padding: 16px 16px 0px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommendation__for-you {
+  font-size: 14px;
+  color: #8e8e8e;
+  margin: -3px 0px -4px;
+  font-weight: 600;
+}
+
+.recommendation__for-you a {
+  font-size: 12px;
+  color: #262626;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* recommendation items */
+
+.recommendation__items {
+  padding: 8px 0px;
+  align-items: center;
+}
+
+.recommendation__item__container {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommendation__item__profile {
+  display: flex;
+  align-items: center;
+}
+
+.recommendation__item__profile > a {
+  margin-right: 12px;
+}
+
+.recommendation__item__profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.recommendation__item__info a {
+  display: block;
+}
+
+.recommendation__item__info a:first-child {
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+  padding-bottom: 0;
+}
+
+.recommendation__item__info a:last-child {
+  font-size: 12px;
+  color: #8e8e8e;
+  margin-top: 4px;
+  font-weight: 400;
+}
+.recommendation__item__button {
+  margin-left: 8px;
+  text-align: center;
+}
+
+.recommendation__item__button button {
+  padding: 0;
+  color: var(--color-blue);
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 12px;
+}
+
+/* infos */
+
+.infos {
+  color: #c7c7c7;
+  font-size: 11px;
+}
+
+.infos__lists {
+  margin-bottom: 16px;
+}
+
+.infos__lists li {
+  display: inline;
+}
+
+.infos__lists a {
+  color: #c7c7c7;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.infos__lists__link::after {
+  content: '·';
+  margin: 0px 2.75px;
+  color: #c7c7c7;
+}

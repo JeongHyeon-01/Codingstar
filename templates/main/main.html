@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram</title>
-    <link rel="icon" type="image/png" href="./img/instagram-icon.png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="icon" type="image/png" href="../../static/main/img/instagram-icon.png" />
+    <link rel="stylesheet" href="../../static/main/css/style.css" />
+  
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@100&display=swap" rel="stylesheet" />
-    <script src="./js/main.js" defer></script>
 
     <!-- Font Awesome script-->
-    <script src="./js/all.js" defer></script>
-    <script src="./js/nav.js" defer></script>
+    <script src="../../static/main/js/all.js" defer></script>
+    <script src="../../static/main/js/nav.js" defer></script>
   </head>
+  
+  
   <body>
     <!-- nav -->
     <!-- nav에서 fa-plus-square 부분에다가 post_create url 연결  -->
@@ -83,11 +84,14 @@
       </div>
     </div>
 
+
+
+
     <main class="main">
       <!-- main__left -->
       <div class="main__left">
         <!-- Story -->
-        <section id="story">
+          <section id="story">
           <ul class="story__container">
             <li class="story__item">
               <button class="story__item__button">
@@ -287,13 +291,13 @@
         <!-- Main feed -->
         <section id="feed">
           <!-- article 1 -->
-          <article class="article">
+          <article class="article">                                     
             <!-- header -->
             <header class="feed__header">
               <div class="header__left">
                 <div class="header__image">
                   <a href="#">
-                    <img src="img/elsa.jpeg" />
+                    <img src="img/elsa.jpeg" /> 
                   </a>
                 </div>
                 <div class="header__info">
@@ -308,14 +312,16 @@
               </div>
             </header>
 
-            <!-- feed content -->
+            <!-- feed picture -->
             <div class="main__feed__picture">
+              <!-- 사진이 들어가는 부분 -->
               <div class="feed__picture">
                 <img src="img/icecream.webp" />
                 <button class="next__picture">
                   <i class="fas fa-chevron-circle-right fa-2x"></i>
                 </button>
               </div>
+              <!-- 사진의 개수에 따라 생기는 점 -->
               <div class="feed__picture__dots">
                 <div class="dot"></div>
                 <div class="dot"></div>
@@ -325,15 +331,19 @@
 
             <!-- reaction buttons -->
             <section class="feed__icon__reaction">
+              <!-- 하트 버튼 -->
               <button class="feed__icon">
                 <i class="far fa-heart"></i>
               </button>
+              <!-- 댓글작성 버튼 -->
               <button class="feed__icon">
                 <i class="far fa-comment"></i>
-              </button>
+              </button>         
+              <!-- DM 보내기 버튼  -->
               <button class="feed__icon">
                 <i class="far fa-paper-plane"></i>
               </button>
+              <!-- 북마크 버튼 -->
               <button class="feed__icon">
                 <i class="far fa-bookmark"></i>
               </button>
@@ -342,6 +352,7 @@
 
             <!-- ___외 00명이 좋아합니다. -->
             <section class="feed__likes">
+              <!-- 좋아한 사람들 사진이 들어가야 하는 부분 -->
               <div class="feed__likes__profile__container">
                 <span class="feed__likes__profile">
                   <img src="img/spongebob.jpeg" />
@@ -353,6 +364,7 @@
                   <img src="img/snowwhite.jpeg" />
                 </span>
               </div>
+              <!-- 좋아요 누른 사람 숫자가 들어가야 하는 부분 -->
               <span class="feed__likes__number">
                 <a href="#">spongebob</a>님 <a href="#">외 <span>41</span>명</a>이 좋아합니다
               </span>
@@ -360,8 +372,12 @@
 
             <!-- 글 & 코멘트 -->
             <section class="feed__post-comment__container">
+
+              <!-- 본인이 작성한 글 -->
               <div class="feed__post">
+                <!-- 본인 아이디 -->
                 <span class="feed__post__id"><a>winterelsa</a></span>
+                <!-- 본인이 작성하는 내용 -->
                 <span class="feed__post__content"
                   >슈팅스타 대존맛🥰
                   <span class="feed__post__more">
@@ -372,10 +388,13 @@
                   </span>
                 </span>
               </div>
+
+              <!-- 댓글 모두 보기 -->
               <div class="feed__post__more-comments">
                 <a href="#">댓글 <span>31</span>개 모두 보기</a>
               </div>
 
+              <!-- 댓글 1 -->
               <div class="feed__comment">
                 <div class="feed__comment__left">
                   <a href="#">spongebob</a>
@@ -386,6 +405,7 @@
                 </span>
               </div>
 
+              <!-- 댓글 2 -->
               <div class="feed__comment">
                 <div class="feed__comment__left">
                   <a href="#">snowwhite</a>
@@ -485,6 +505,8 @@
 
             <!-- 글 & 코멘트 -->
             <section class="feed__post-comment__container">
+
+              <!-- 글 작성 -->
               <div class="feed__post">
                 <span class="feed__post__id"><a>winterelsa</a></span>
                 <span class="feed__post__content"
@@ -497,10 +519,13 @@
                   </span>
                 </span>
               </div>
+
+              <!-- 댓글 모두 보기 -->
               <div class="feed__post__more-comments">
                 <a>댓글 <span>31</span>개 모두 보기</a>
               </div>
 
+              <!-- 댓글 1 -->
               <div class="feed__comment">
                 <div class="feed__comment__left">
                   <a href="#">spongebob</a>
@@ -511,6 +536,7 @@
                 </span>
               </div>
 
+              <!-- 댓글 2 -->
               <div class="feed__comment">
                 <div class="feed__comment__left">
                   <a href="#">snowwhite</a>
@@ -593,6 +619,7 @@
                 </div>
               </div>
 
+              <!-- item 3 -->
               <div class="recommendation__item__container">
                 <div class="recommendation__item__profile">
                   <a href="#">
@@ -609,6 +636,7 @@
                 </div>
               </div>
 
+              <!-- item 4 -->
               <div class="recommendation__item__container">
                 <div class="recommendation__item__profile">
                   <a href="#">
@@ -625,6 +653,7 @@
                 </div>
               </div>
 
+              <!-- item 5 -->
               <div class="recommendation__item__container">
                 <div class="recommendation__item__profile">
                   <a href="#">
@@ -642,6 +671,8 @@
               </div>
             </div>
           </div>
+
+          <!-- info & 저작권 -->
           <div class="infos">
             <ul class="infos__lists">
               <li><a class="infos__lists__link">소개</a></li>

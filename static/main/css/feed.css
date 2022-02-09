@@ -1,0 +1,263 @@
+/* main feed */
+
+#feed {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  
+  .article {
+    margin-bottom: 24px;
+    border: var(--border);
+    border-radius: 3px;
+  }
+  
+  .feed__header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__left {
+    padding: 14px 4px 14px 16px;
+    display: flex;
+    width: calc(100% - 48px);
+  }
+  
+  .header__image {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .header__image a {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .header__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .header__info {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 14px;
+  }
+  
+  .header__info__id {
+    font-size: 14px;
+    padding: 2px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    width: auto;
+  }
+  
+  .header__info__location {
+    font-size: 12px;
+    padding: 2px;
+  }
+  
+  .header__right {
+    padding-right: 8px;
+    width: 48px;
+  }
+  
+  .header__right button {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  /* feed content */
+  .feed__picture {
+    position: relative;
+  }
+  
+  .feed__picture img {
+    width: 100%;
+    height: 600px;
+  }
+  
+  .feed__picture button {
+    color: #a8a8a8;
+    padding: 16px 8px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    justify-self: center;
+    font-size: 14px;
+    line-height: 18px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: auto;
+  }
+  
+  .feed__picture__dots {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+  }
+  
+  .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #a8a8a8;
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+  
+  /* icon reaction */
+  .feed__icon__reaction {
+    width: 100%;
+    padding: 6px 16px 8px 16px;
+    margin: -34px 0px 0px 0px;
+    display: flex;
+    height: auto;
+    position: relative;
+  }
+  
+  .feed__icon {
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .feed__icon:last-child {
+    margin: 0px -10px 0px 426px;
+  }
+  
+  .feed__icon i {
+    font-size: 22px;
+  }
+  
+  /* ___외 00명이 좋아합니다. */
+  .feed__likes {
+    padding: 0px 16px;
+    margin: 0px 0px 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .feed__likes__profile__container {
+    overflow: hidden;
+    display: inline;
+  }
+  
+  .feed__likes__profile {
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+  }
+  
+  .feed__likes__profile img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 16px;
+  }
+  
+  .feed__likes__profile__continer span:nth-child(2) {
+    transform: translateX(-50%);
+  }
+  
+  .feed__likes__number {
+    font-size: 14px;
+  }
+  
+  .feed__likes__number a:first-child {
+    margin: -5px;
+    padding: 5px;
+  }
+  
+  .feed__likes__number a {
+    font-weight: 600;
+  }
+  
+  /* 글 & 코멘트 */
+  
+  .feed__post-comment__container {
+    padding: 0px 16px;
+    font-size: 14px;
+  }
+  
+  .feed__post__id {
+    font-weight: 600;
+  }
+  
+  .feed__post__contenet {
+    overflow-wrap: break-word;
+    white-space: nowrap;
+  }
+  
+  .feed__post__more button {
+    color: #8e8e8e;
+    padding: 0;
+  }
+  
+  .feed__post,
+  .feed__post__more-comments,
+  .feed__comment {
+    margin-bottom: 4px;
+  }
+  
+  .feed__post__more-comments a {
+    color: #8e8e8e;
+  }
+  
+  .feed__comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .feed__comment__left a {
+    font-weight: 600;
+    margin: -5px;
+    padding: 0px 5px;
+  }
+  
+  .feed__comment__left span {
+    overflow-wrap: break-word;
+  }
+  
+  /* 댓글 창 */
+  
+  .feed__comment-form__container {
+    padding: 6px 16px;
+  }
+  
+  .feed__comment-form form {
+    display: flex;
+  }
+  
+  .feed__comment-form button:first-child {
+    padding: 8px 16px 8px 0;
+  }
+  
+  .feed__comment-form button > i {
+    font-size: 22px;
+  }
+  
+  .feed__comment-form input {
+    flex-grow: 2;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border-style: none;
+  }
+  
+  .feed__comment-form button:last-child {
+    padding: 0;
+    opacity: 0.3;
+    color: var(--color-blue);
+    display: inline-block;
+    width: auto;
+  }
+  
