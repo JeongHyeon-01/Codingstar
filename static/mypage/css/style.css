@@ -1,0 +1,20 @@
+/* font */
+
+/* settings */
+@import "reset.css";
+@import "variables.css";
+
+/* Components */
+
+@import "components/footer.css";
+@import "components/nav.css";
+
+/* Screens */
+@import "screens/profile.css";
+@import "screens/post-bar.css";
+@import "screens/main-article.css";
+
+body {
+  background-color: var(--color-main);
+  /* 폰트 (서체, 굵기) */
+}

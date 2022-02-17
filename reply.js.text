@@ -1,0 +1,41 @@
+  $(".write_reply").click(function () {
+        console.log($(this).prev().val());
+        console.log($(this).attr('feed_id'));
+        let success = false;
+        let reply_content = $(this).prev().val();
+        let feed_id = Number($(this).attr('feed_id'));
+
+        if (reply_content.length <= 0) {
+            alert('댓글을 입력하세요')
+            return 0;
+        }
+
+        $.ajax({
+            url: "/content/replycreate",
+            data: {
+                email: '{{ user.email }}',
+                user_id: '{{ user.user_id }}',
+                reply_content: reply_content,
+                feed_id: feed_id
+            },
+            method: "POST",
+            dataType: "json",
+            async: false,
+            success: function (data) {
+                success = true
+                $("reply_list_" + feed_id).append('<div class="feed__comment"><div class="feed__comment__left"><a href="#">{{ reply.nickname }}</a><span>{{ reply.reply_content}}</span> </div>');
+                location.replace('/content')
+
+            },
+            error: function (request, status, error) {
+                let data = JSON.parse(request.responseText);
+                console.log(data.message);
+                alert(data.message);
+            }
+        });
+        console.log(success)
+        if (success == true) {
+            $(this).parent().prev().append('<span class="feed_txt"><b> {{ user.user_id }} </b> ' + content + ' </span>');
+            $('.write_reply_input').val('');
+        }
+    });

@@ -1,0 +1,328 @@
+body {
+  background-color: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
+.article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 32px auto 0;
+  padding-bottom: 32px;
+}
+
+.article .index-section {
+  background-image: url(https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png);
+  height: 618px;
+  background-size: 454px 618px;
+  -ms-flex-preferred-size: 440px;
+      flex-basis: 440px;
+  position: relative;
+}
+
+.main-form {
+  border: 1px solid #dbdbdb;
+  padding: 10px 0;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 10px;
+}
+
+.main-form h1 {
+  font-family: 'Lobster Two', cursive;
+  font-size: 4.5em;
+  text-align: center;
+  margin: 20px auto 40px;
+}
+
+.main-form .main-form__input {
+  position: relative;
+}
+
+.main-form .main-form__input label {
+  position: relative;
+}
+
+.main-form .main-form__input label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: text;
+  margin-left: 8px;
+  font-size: 12px;
+  color: #8e8e8e;
+  z-index: 1;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.main-form .main-form__input label input {
+  position: relative;
+  margin: 3px auto;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 268px;
+  height: 38px;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  background: #fafafa;
+  z-index: 0;
+  font-size: 12px;
+  color: #3d3d3d;
+}
+
+.main-form .main-form__input label input:focus {
+  outline: 0;
+  border: 1px solid #a8a8a8;
+}
+
+.main-form .main-form__input label input:valid + span {
+  -webkit-transform: translateY(-130%);
+          transform: translateY(-130%);
+  font-size: 10px;
+}
+
+.main-form .main-form__input label input:valid {
+  padding-top: 20px;
+  padding-bottom: 7px;
+}
+
+.main-form .main-form__input .input-pw {
+  position: absolute;
+  top: 17px;
+  right: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.main-form .main-form_btn button {
+  margin: 11px 0 0;
+  outline: 0;
+  border: 0;
+  background: #0095f6;
+  color: #ffffff;
+  border-radius: 3px;
+  width: 268px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-form .main-form_btn button:disabled {
+  background: #bbe0fc;
+  color: #ffffff;
+}
+
+.main-form .main-form__or {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 19px 40px;
+  cursor: default;
+}
+
+.main-form .main-form__or .or-line {
+  background: #dbdbdb;
+  height: 1px;
+  width: 104.75px;
+}
+
+.main-form .main-form__or .or-line-text {
+  margin: 0 18px -2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8e8e8e;
+}
+
+.main-form .main-form__fb button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: #385185;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.main-form .main-form__fb button .fb-logo {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.main-form a {
+  margin: 11px 0;
+  color: #385185;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main .signup {
+  padding: 10px 0;
+  margin: 0 0 23px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  width: 350px;
+  height: 63px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main .signup p {
+  font-size: 14px;
+  margin: 10px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #262626;
+}
+
+.main .signup p a {
+  text-decoration: none;
+  margin-left: 4px;
+  color: #0095f6;
+  font-weight: 600;
+}
+
+.main .app-dn p {
+  margin: 23px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #262626;
+}
+
+.main .app-dn .app-dn__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .app-dn .app-dn__icon a {
+  margin: 0 4px;
+}
+
+.main .app-dn .app-dn__icon a img {
+  width: 136px;
+  height: 40px;
+}
+
+.footer {
+  padding: 0 16px;
+}
+
+.footer-item {
+  margin: 24px 0 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-item ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1px;
+  font-size: 12px;
+}
+
+.footer-item ul li {
+  margin: 0 8px 10px;
+}
+
+.footer-item ul li a {
+  text-decoration: none;
+  color: #8e8e8e;
+}
+
+.footer-item .footer-item__lang {
+  margin-top: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.footer-item .footer-item__lang span {
+  margin-right: 3px;
+}
+
+.footer-item .footer-item__lang .lang-select {
+  position: relative;
+  margin-right: 15px;
+}
+
+.footer-item .footer-item__lang .lang-select select {
+  width: 50px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
