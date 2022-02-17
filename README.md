@@ -36,3 +36,7 @@
 4. 메인페이지 피드 업로드 부분 modal 새로 달아 두었습니다. 혹시 시간이 괜찮으시다면 디자인 수정 부탁드립니다. 
     1. Modal.js 및 main.html, modal.css 에 있습니다
 5. 메인페이지 562 번째줄… replace안하고 등록되게 해주세요
+
+
+
+PS 누가 본다면 settings 에 DE_BUG = false로 변경해주세용
