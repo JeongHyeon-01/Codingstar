@@ -186,107 +186,19 @@
         <!-- Story -->
         <section id="story">
             <ul class="story__container">
+            {% for info in user_info_list %}
                 <li class="story__item">
                     <button class="story__item__button">
-                        <img class="story__item__img" src="{% get_media_prefix %}{{ user.profile_img }}"/>
+                        <img class="story__item__img" src="{% get_media_prefix %}{{ info.profile_img }}"/>
                         <div class="story__item__id">
-                            <span>{{ user.nickname }}</span>
+                            <span>{{ info.nickname }}</span>
                         </div>
                     </button>
                 </li>
+            {% endfor %}
 
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="#"/>
-                    </button>
-                    <div class="story__item__id">
-                        <span>spongebob</span>
-                    </div>
-                </li>
 
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="#"/>
-                    </button>
-                    <div class="story__item__id">
-                        <span>cinderella</span>
-                    </div>
-                </li>
-
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/mulan.webp"/>
-                    </button>
-                    <div class="story__item__id">
-                        <span>mulan</span>
-                    </div>
-                </li>
-
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/rapunzel.webp"/>
-                    </button>
-                    <div class="story__item__id">
-                        <span>rapunzel</span>
-                    </div>
-                </li>
-
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/snowwhite.jpeg"/>
-                    </button>
-                    <div class="story__item__id">
-                        <span>snowwhite</span>
-                    </div>
-                </li>
-
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/elsa.jpeg"/>
-                    </button>
-                    <div class="story__item__id">
-                        <span>winterelsa</span>
-                    </div>
-                </li>
-
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/spongebob.jpeg"/>
-                    </button>
-                    <div class="story__item__id">
-                        <span>spongebob</span>
-                    </div>
-                </li>
-
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/cinderella.webp"/>
-                    </button>
-                    <div class="story__item__id">
-                        <span>cinderella</span>
-                    </div>
-                </li>
-
-                <li class="story__item">
-                    <button class="story__item__button">
-                        <img class="story__item__img" src="img/mulan.webp"/>
-                    </button>
-                    <div class="story__item__id">
-                        <span>mulan</span>
-                    </div>
-                </li>
             </ul>
-            <div class="right__arrow">
-                <button>
-                    <i class="fas fa-chevron-circle-right fa-2x"></i>
-                </button>
-            </div>
-
-            <div class="left__arrow">
-                <button>
-                    <i class="fas fa-chevron-circle-left fa-2x"></i>
-                </button>
-            </div>
         </section>
 
         <!-- Main feed -->
@@ -451,83 +363,24 @@
                 </div>
                 <div class="recommendation__items">
                     <!-- item 1 -->
+                    {% for info in user_info_list %}
                     <div class="recommendation__item__container">
                         <div class="recommendation__item__profile">
                             <a href="#">
-                                <img src="img/mulan.webp"/>
+                                <img src="{% get_media_prefix %}{{ info.profile_img }}"/>
                             </a>
                             <div class="recommendation__item__info">
-                                <a href="#">mulan</a>
-                                <a href="#">whitesnow님이 팔로우합니다</a>
+                                <a href="#">{{ info.nickname }}</a>
+                                <a href="#">{{ user.name }}님이 팔로우합니다</a>
                             </div>
                         </div>
                         <div class="recommendation__item__button">
                             <button>팔로우</button>
                         </div>
                     </div>
-
-                    <!-- item 2 -->
-                    <div class="recommendation__item__container">
-                        <div class="recommendation__item__profile">
-                            <a href="#">
-                                <img src="img/mulan.webp"/>
-                            </a>
-                            <div class="recommendation__item__info">
-                                <a href="#">mulan</a>
-                                <a href="#">whitesnow님이 팔로우합니다</a>
-                            </div>
-                        </div>
-                        <div class="recommendation__item__button">
-                            <button>팔로우</button>
-                        </div>
-                    </div>
-                    <div class="recommendation__item__container">
-                        <div class="recommendation__item__profile">
-                            <a href="#">
-                                <img src="img/mulan.webp"/>
-                            </a>
-                            <div class="recommendation__item__info">
-                                <a href="#">mulan</a>
-                                <a href="#">whitesnow님이 팔로우합니다</a>
-                            </div>
-                        </div>
-                        <div class="recommendation__item__button">
-                            <button>팔로우</button>
-                        </div>
-                    </div>
-                    <div class="recommendation__item__container">
-                        <div class="recommendation__item__profile">
-                            <a href="#">
-                                <img src="img/mulan.webp"/>
-                            </a>
-                            <div class="recommendation__item__info">
-                                <a href="#">mulan</a>
-                                <a href="#">whitesnow님이 팔로우합니다</a>
-                            </div>
-                        </div>
-
-                        <div class="recommendation__item__button">
-                            <button>팔로우</button>
-                        </div>
-                    </div>
-
-                    <div class="recommendation__item__container">
-                        <div class="recommendation__item__profile">
-                            <a href="#">
-                                <img src="img/mulan.webp"/>
-                            </a>
-                            <div class="recommendation__item__info">
-                                <a href="#">mulan</a>
-                                <a href="#">whitesnow님이 팔로우합니다</a>
-                            </div>
-                        </div>
-
-                        <div class="recommendation__item__button">
-                            <button>팔로우</button>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
-            </div>
+                </div>
         </section>
     </div>
 </main>

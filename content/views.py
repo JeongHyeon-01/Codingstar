@@ -12,6 +12,13 @@ from user.models import User
 class Main(APIView):
     def get(self, request):
         email = request.session.get('email', None)
+        user_object_info = User.objects.all().order_by('-id')
+        user_info_list = []
+        for info in user_object_info:
+            user = User.objects.filter(email=info.email).first()
+
+            user_info_list.append(dict(nickname=user.nickname,
+                                       profile_img=user.profile_img))
         feed_object_feed_list = Feed.objects.all().order_by('-id')
         feed_list = []
         for feed in feed_object_feed_list:
@@ -45,7 +52,7 @@ class Main(APIView):
         user = User.objects.filter(email=email).first()
         if user is None:
             return render(request, "user/signin.html")
-        return render(request, './content/main.html', context=dict(feed_list=feed_list, user=user))
+        return render(request, './content/main.html', context=dict(feed_list=feed_list,user_info_list=user_info_list ,user=user))
 
 
 class UploadFeed(APIView):
