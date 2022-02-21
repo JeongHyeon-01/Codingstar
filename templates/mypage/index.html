@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" type="image/png" href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico"
+    />
     <!-- CSS -->
     {% load static %}
-    <link rel="stylesheet" href="{% static './mypage/css/reset.css' %}"/>
-    <link rel="stylesheet" href="{% static './mypage/css/style.css' %}"/>
-    <link rel="stylesheet" href="{% static './mypage/css/nav.css' %}"/>
+    <link rel="stylesheet" href="{% static './mypage/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static './mypage/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static './mypage/css/nav.css' %}" />
 
     {% load static %}
     <script src="{% static './content/js/nav.js' %}" defer></script>
@@ -20,151 +24,169 @@
 
     <!-- title -->
     <title>Codingstagram</title>
-</head>
+  </head>
 
-<body>
-<!-- nav -->
-<nav class="nav">
-    <div class="nav__logo">
+  <body>
+    <!-- nav -->
+    <nav class="nav">
+      <div class="nav__logo">
         <a href="{% url 'content:main' %}">Codingstagram</a>
-    </div>
-    <div class="nav__search-bar">
+      </div>
+      <div class="nav__search-bar">
         <span class="search-bar__glass"><i class="fas fa-search"></i></span>
-        <span class="search-bar__cross"><i class="fas fa-times-circle"></i></span>
-        <input class="search-input" type="text" placeholder="검색"/>
-    </div>
-    <div class="nav__list">
+        <span class="search-bar__cross"
+          ><i class="fas fa-times-circle"></i
+        ></span>
+        <input class="search-input" type="text" placeholder="검색" />
+      </div>
+      <div class="nav__list">
         <ul>
-            <li>
-                <a href="#"><i class="fas fa-home"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="far fa-paper-plane"></i></a>
-            </li>
-            <li>
-                <span id='add_feed'><i class="far fa-plus-square"></i></span>
-            </li>
-            <li>
-                <a href="#"><i class="far fa-compass"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="far fa-heart"></i></a>
-            </li>
-            <li class="drop-down">
-                <button><img src="{% get_media_prefix %}{{ user.profile_img }}"/></button>
-            </li>
+          <li>
+            <a href="#"><i class="fas fa-home"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-paper-plane"></i></a>
+          </li>
+          <li>
+            <span id="add_feed"><i class="far fa-plus-square"></i></span>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-compass"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-heart"></i></a>
+          </li>
+          <li class="drop-down">
+            <button>
+              <img src="{% get_media_prefix %}{{ user.profile_img }}" />
+            </button>
+          </li>
         </ul>
-    </div>
-</nav>
-<div class="tap hidden"></div>
-<div class="drop-down__menu hidden">
-    <div class="drop-down__link">
-        <a href="{% url 'profile' %}"
-        >
-            <div>
-                <span><i class="far fa-user-circle"></i></span>프로필
-            </div>
-        </a
-        >
-        <a href="#"
-        >
-            <div>
-                <span class="bookmark"><i class="far fa-bookmark"></i></span>저장됨
-            </div>
-        </a
-        >
-        <a href="#"
-        >
-            <div>
-                <span><i class="fas fa-cog"></i></span>설정
-            </div>
-        </a
-        >
+      </div>
+    </nav>
+    <div class="tap hidden"></div>
+    <div class="drop-down__menu hidden">
+      <div class="drop-down__link">
+        <a href="{% url 'profile' %}">
+          <div>
+            <span><i class="far fa-user-circle"></i></span>프로필
+          </div>
+        </a>
         <a href="#">
-            <div>
-                <span><i class="fas fa-sync"></i></span>계정전환
-            </div>
+          <div>
+            <span class="bookmark"><i class="far fa-bookmark"></i></span>저장됨
+          </div>
+        </a>
+        <a href="#">
+          <div>
+            <span><i class="fas fa-cog"></i></span>설정
+          </div>
+        </a>
+        <a href="#">
+          <div>
+            <span><i class="fas fa-sync"></i></span>계정전환
+          </div>
         </a>
         <a href="{% url 'user:logout' %}">
-            <div class="logout"> 로그아웃</div>
+          <div class="logout">로그아웃</div>
         </a>
+      </div>
     </div>
-
-</div>
-<!-- main -->
-<main class="main">
-    <div class="main-profile">
+    <!-- main -->
+    <main class="main">
+      <div class="main-profile">
         <!--  main-header -->
         <header class="main-profile__header">
-            <!--  main-header-img-->
-            <div class="main-profile__header__img">
-                <img src="{% get_media_prefix %}{{ user.profile_img }}" alt="profile img"/>
+          <!--  main-header-img-->
+          <div class="main-profile__header__img">
+            <img
+              src="{% get_media_prefix %}{{ user.profile_img }}"
+              alt="profile img"
+            />
+          </div>
+          <!--  main-header-section-->
+          <section class="main-profile__header__section">
+            <div class="section__profile-user">
+              <h2 class="user-data__id">{{ user.nickname }}</h2>
+              <div class="user-data__profile-edit">
+                <button
+                  id="button_profile_upload"
+                  type="button"
+                  style="
+                    margin-left: 5px;
+                    padding: 6px;
+                    width: 120px;
+                    border-radius: 5px;
+                    border: 1px solid rgb(209, 209, 209);
+                    background-color: transparent;
+                    font-size: 14px;
+                    font-weight: 500;
+                  "
+                >
+                  프로필 사진 편집
+                </button>
+                <input
+                  type="file"
+                  id="input_fileupload"
+                  onchange="profile_upload();"
+                  style="display: none"
+                />
+              </div>
+              <div class="user-data__setting">
+                <button class="user-data__setting__btn">
+                  <svg
+                    aria-label="user-data__setting__btn-svg"
+                    class="_8-yf5"
+                    color="#262626"
+                    fill="#262626"
+                    height="24"
+                    role="img"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      fill="none"
+                      r="8.635"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></circle>
+                    <path
+                      d="M14.232 3.656a1.269 1.269 0 01-.796-.66L12.93 2h-1.86l-.505.996a1.269 1.269 0 01-.796.66m-.001 16.688a1.269 1.269 0 01.796.66l.505.996h1.862l.505-.996a1.269 1.269 0 01.796-.66M3.656 9.768a1.269 1.269 0 01-.66.796L2 11.07v1.862l.996.505a1.269 1.269 0 01.66.796m16.688-.001a1.269 1.269 0 01.66-.796L22 12.93v-1.86l-.996-.505a1.269 1.269 0 01-.66-.796M7.678 4.522a1.269 1.269 0 01-1.03.096l-1.06-.348L4.27 5.587l.348 1.062a1.269 1.269 0 01-.096 1.03m11.8 11.799a1.269 1.269 0 011.03-.096l1.06.348 1.318-1.317-.348-1.062a1.269 1.269 0 01.096-1.03m-14.956.001a1.269 1.269 0 01.096 1.03l-.348 1.06 1.317 1.318 1.062-.348a1.269 1.269 0 011.03.096m11.799-11.8a1.269 1.269 0 01-.096-1.03l.348-1.06-1.317-1.318-1.062.348a1.269 1.269 0 01-1.03-.096"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
             </div>
-            <!--  main-header-section-->
-            <section class="main-profile__header__section">
-                <div class="section__profile-user">
-                    <h2 class="user-data__id">{{ user.nickname }}</h2>
-                    <div class="user-data__profile-edit">
-{#                        <a class="user-data__profile-edit__link" href="#">프로필 편집</a>#}
-                        <button id="button_profile_upload" type="button" style="margin-left: 10px;font-size: 14px;width: 100px; border: 1px solid silver; background-color: transparent">프로필 사진 편집</button>
-                        <input type="file" id="input_fileupload"  onchange="profile_upload();" style="display: none">
-
-                    </div>
-                    <div class="user-data__setting">
-                        <button class="user-data__setting__btn">
-                            <svg
-                                    aria-label="user-data__setting__btn-svg"
-                                    class="_8-yf5"
-                                    color="#262626"
-                                    fill="#262626"
-                                    height="24"
-                                    role="img"
-                                    viewBox="0 0 24 24"
-                                    width="24"
-                            >
-                                <circle
-                                        cx="12"
-                                        cy="12"
-                                        fill="none"
-                                        r="8.635"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                ></circle>
-                                <path
-                                        d="M14.232 3.656a1.269 1.269 0 01-.796-.66L12.93 2h-1.86l-.505.996a1.269 1.269 0 01-.796.66m-.001 16.688a1.269 1.269 0 01.796.66l.505.996h1.862l.505-.996a1.269 1.269 0 01.796-.66M3.656 9.768a1.269 1.269 0 01-.66.796L2 11.07v1.862l.996.505a1.269 1.269 0 01.66.796m16.688-.001a1.269 1.269 0 01.66-.796L22 12.93v-1.86l-.996-.505a1.269 1.269 0 01-.66-.796M7.678 4.522a1.269 1.269 0 01-1.03.096l-1.06-.348L4.27 5.587l.348 1.062a1.269 1.269 0 01-.096 1.03m11.8 11.799a1.269 1.269 0 011.03-.096l1.06.348 1.318-1.317-.348-1.062a1.269 1.269 0 01.096-1.03m-14.956.001a1.269 1.269 0 01.096 1.03l-.348 1.06 1.317 1.318 1.062-.348a1.269 1.269 0 011.03.096m11.799-11.8a1.269 1.269 0 01-.096-1.03l.348-1.06-1.317-1.318-1.062.348a1.269 1.269 0 01-1.03-.096"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                ></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="section__profile-follow">
-                    <ul class="section__profile-follow__list">
-                        <li class="follow-data">
-                            <span class="follow-data__post">게시물</span>
-                            <span class="follow-data__post-num">6</span>
-                        </li>
-                        <li class="follow-data">
-                            <a class="follow-data__follower" href="#">
-                                <span class="a">팔로워</span>
-                                <span class="a">10</span>
-                            </a>
-                        </li>
-                        <li class="follow-data">
-                            <a class="follow-data__follow" href="#">
-                                <span class="a">팔로우</span>
-                                <span class="a">12</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="section__profile-name">{{ user.name }}</div>
-                </div>
-            </section>
+            <div class="section__profile-follow">
+              <ul class="section__profile-follow__list">
+                <li class="follow-data">
+                  <span class="follow-data__post">게시물</span>
+                  <span class="follow-data__post-num">6</span>
+                </li>
+                <li class="follow-data">
+                  <a class="follow-data__follower" href="#">
+                    <span class="a">팔로워</span>
+                    <span class="a">10</span>
+                  </a>
+                </li>
+                <li class="follow-data">
+                  <a class="follow-data__follow" href="#">
+                    <span class="a">팔로우</span>
+                    <span class="a">12</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="section__profile-name">{{ user.name }}</div>
+            </div>
+          </section>
         </header>
 
         <!-- Add header__buttom-text -->
@@ -172,502 +194,515 @@
         <div class="header__buttom-text">코딩스타</div>
         <!-- post-bar -->
         <div class="main-profile__post-bar">
-            <a href="index.html" class="post-bar__tab selected">
+          <a href="index.html" class="post-bar__tab selected">
             <span class="post-bar__tab__post">
               <svg
-                      aria-label=""
-                      class="post-bar__tab__post-icon"
-                      color="#262626"
-                      fill="#262626"
-                      height="12"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      width="12"
+                aria-label=""
+                class="post-bar__tab__post-icon"
+                color="#262626"
+                fill="#262626"
+                height="12"
+                role="img"
+                viewBox="0 0 24 24"
+                width="12"
               >
                 <rect
-                        fill="none"
-                        height="18"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        width="18"
-                        x="3"
-                        y="3"
+                  fill="none"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  width="18"
+                  x="3"
+                  y="3"
                 ></rect>
                 <line
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        x1="9.015"
-                        x2="9.015"
-                        y1="3"
-                        y2="21"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  x1="9.015"
+                  x2="9.015"
+                  y1="3"
+                  y2="21"
                 ></line>
                 <line
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        x1="14.985"
-                        x2="14.985"
-                        y1="3"
-                        y2="21"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  x1="14.985"
+                  x2="14.985"
+                  y1="3"
+                  y2="21"
                 ></line>
                 <line
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        x1="21"
-                        x2="3"
-                        y1="9.015"
-                        y2="9.015"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  x1="21"
+                  x2="3"
+                  y1="9.015"
+                  y2="9.015"
                 ></line>
                 <line
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        x1="21"
-                        x2="3"
-                        y1="14.985"
-                        y2="14.985"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  x1="21"
+                  x2="3"
+                  y1="14.985"
+                  y2="14.985"
                 ></line>
               </svg>
               <span class="post-bar__tab__post-name">게시물</span>
             </span>
-            </a>
-            <a href="post-saved.html" class="post-bar__tab">
+          </a>
+          <a href="post-saved.html" class="post-bar__tab">
             <span class="post-bar__tab__post">
               <svg
-                      aria-label=""
-                      class="post-bar__tab__post-icon"
-                      color="#8e8e8e"
-                      fill="#8e8e8e"
-                      height="12"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      width="12"
+                aria-label=""
+                class="post-bar__tab__post-icon"
+                color="#8e8e8e"
+                fill="#8e8e8e"
+                height="12"
+                role="img"
+                viewBox="0 0 24 24"
+                width="12"
               >
                 <polygon
-                        fill="none"
-                        points="20 21 12 13.44 4 21 4 3 20 3 20 21"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                  fill="none"
+                  points="20 21 12 13.44 4 21 4 3 20 3 20 21"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 ></polygon>
               </svg>
               <span class="post-bar__tab__post-name">저장됨</span>
             </span>
-            </a>
-            <a href="post-tagged.html" class="post-bar__tab">
+          </a>
+          <a href="post-tagged.html" class="post-bar__tab">
             <span class="post-bar__tab__post">
               <svg
-                      aria-label=""
-                      class="post-bar__tab__post-icon"
-                      color="#8e8e8e"
-                      fill="#8e8e8e"
-                      height="12"
-                      role="img"
-                      viewBox="0 0 24 24"
-                      width="12"
+                aria-label=""
+                class="post-bar__tab__post-icon"
+                color="#8e8e8e"
+                fill="#8e8e8e"
+                height="12"
+                role="img"
+                viewBox="0 0 24 24"
+                width="12"
               >
                 <path
-                        d="M10.201 3.797L12 1.997l1.799 1.8a1.59 1.59 0 001.124.465h5.259A1.818 1.818 0 0122 6.08v14.104a1.818 1.818 0 01-1.818 1.818H3.818A1.818 1.818 0 012 20.184V6.08a1.818 1.818 0 011.818-1.818h5.26a1.59 1.59 0 001.123-.465z"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                  d="M10.201 3.797L12 1.997l1.799 1.8a1.59 1.59 0 001.124.465h5.259A1.818 1.818 0 0122 6.08v14.104a1.818 1.818 0 01-1.818 1.818H3.818A1.818 1.818 0 012 20.184V6.08a1.818 1.818 0 011.818-1.818h5.26a1.59 1.59 0 001.123-.465z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 ></path>
                 <path
-                        d="M18.598 22.002V21.4a3.949 3.949 0 00-3.948-3.949H9.495A3.949 3.949 0 005.546 21.4v.603"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                  d="M18.598 22.002V21.4a3.949 3.949 0 00-3.948-3.949H9.495A3.949 3.949 0 005.546 21.4v.603"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 ></path>
                 <circle
-                        cx="12.072"
-                        cy="11.075"
-                        fill="none"
-                        r="3.556"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                  cx="12.072"
+                  cy="11.075"
+                  fill="none"
+                  r="3.556"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 ></circle>
               </svg>
               <span class="post-bar__tab__post-name">태그됨</span>
             </span>
-            </a>
+          </a>
         </div>
 
         <!-- main article -->
         <article class="main-article">
-            <div class="main-article__posts">
-                {% for feed in feed_list %}
-                    <a class="post-img" href="" title="post2" style="background-image:url('{% get_media_prefix %}{{ feed.image }} ')"></a>
-                {% endfor %}
-            </div>
+          <div class="main-article__posts">
+            {% for feed in feed_list %}
+            <a
+              class="post-img"
+              href=""
+              title="post2"
+              style="background-image:url('{% get_media_prefix %}{{ feed.image }} ')"
+            ></a>
+            {% endfor %}
+          </div>
         </article>
-    </div>
-</main>
+      </div>
+    </main>
 
-<!-- footer -->
-<footer class="footer">
-    <div class="main-footer">
+    <!-- footer -->
+    <footer class="footer">
+      <div class="main-footer">
         <ul class="footer-top">
-            <a href="#" class="footer-top__link">
-                <li>Meta</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>소개</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>블로그</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>채용 정보</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>도움말</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>API</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>개인정보처리방침</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>약관</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>인기 계정</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>해시태그</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>위치</li>
-            </a>
-            <a href="#" class="footer-top__link">
-                <li>Instagram Lite</li>
-            </a>
+          <a href="#" class="footer-top__link">
+            <li>Meta</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>소개</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>블로그</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>채용 정보</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>도움말</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>API</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>개인정보처리방침</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>약관</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>인기 계정</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>해시태그</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>위치</li>
+          </a>
+          <a href="#" class="footer-top__link">
+            <li>Instagram Lite</li>
+          </a>
         </ul>
         <div class="footer-bottom">
-            <a href="#" class="footer-bottom__link"
+          <a href="#" class="footer-bottom__link"
             ><span class="footer-bottom__language">한국어</span>
-                <i class="fas fa-chevron-down"></i>
-            </a>
-            <a href="#" class="footer-bottom__link">
-                <span class="footer-bottom__meta">2022 Instagram from Meta</span></a
-            >
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <a href="#" class="footer-bottom__link">
+            <span class="footer-bottom__meta">2022 Instagram from Meta</span></a
+          >
         </div>
-    </div>
-</footer>
-<script>
-        // 모달 띄우기 코드
-    const modal = document.getElementById("modal_add_feed");
-    const buttonAddFeed = document.getElementById("add_feed");
-    buttonAddFeed.addEventListener("click", e => {
-        modal.style.top = window.pageYOffset + 'px'; // top을 이용해 시작 y위치를 바꿔줌
+      </div>
+    </footer>
+    <script>
+      // 모달 띄우기 코드
+      const modal = document.getElementById("modal_add_feed");
+      const buttonAddFeed = document.getElementById("add_feed");
+      buttonAddFeed.addEventListener("click", (e) => {
+        modal.style.top = window.pageYOffset + "px"; // top을 이용해 시작 y위치를 바꿔줌
         modal.style.display = "flex";
         document.body.style.overflowY = "hidden"; // 스크롤 없애기
-    });
+      });
 
-    <!-- jquery 부분 -->
+      <!-- jquery 부분 -->
 
-
-    <!-- @@@좋아요 누르기 -->
-    $('.favorite_icon').click(function () {
+      <!-- @@@좋아요 누르기 -->
+      $(".favorite_icon").click(function () {
         console.log($(this).prev().val());
-        console.log($(this).attr('feed_id'));
+        console.log($(this).attr("feed_id"));
         let success = false;
         let icon = $.trim($(this).html());
-        console.log('지금현재 상태 : ' + icon);
+        console.log("지금현재 상태 : " + icon);
         let is_like = false;
-        if (icon == 'favorite_border') {
-            is_like = true;
+        if (icon == "favorite_border") {
+          is_like = true;
         }
-        let feed_id = Number($(this).attr('feed_id'));
+        let feed_id = Number($(this).attr("feed_id"));
 
         $.ajax({
-            url: "/content/like",
-            data: {
-                email: '{{ user.email }}',
-                is_like: is_like,
-                feed_id: feed_id
-            },
-            method: "POST",
-            dataType: "json",
-            async: false,
-            success: function (data) {
-                alert(data.message);
-                success = true
-            },
-            error: function (request, status, error) {
-                let data = JSON.parse(request.responseText);
-                console.log(data.message);
-                alert(data.message);
-            }
+          url: "/content/like",
+          data: {
+            email: "{{ user.email }}",
+            is_like: is_like,
+            feed_id: feed_id,
+          },
+          method: "POST",
+          dataType: "json",
+          async: false,
+          success: function (data) {
+            alert(data.message);
+            success = true;
+          },
+          error: function (request, status, error) {
+            let data = JSON.parse(request.responseText);
+            console.log(data.message);
+            alert(data.message);
+          },
         });
-        console.log(success)
+        console.log(success);
         if (success == true) {
-            console.log(is_like)
-            if (is_like) {
-                $(this).html('favorite');
-                let like_count_object = $(this).parent().parent().next().find('p').find('span');
-                let like_count = Number(like_count_object.html());
-                like_count_object.html(like_count + 1);
-                console.log(like_count);
-            } else {
-                $(this).html('favorite_border');
-                let like_count_object = $(this).parent().parent().next().find('p').find('span');
-                let like_count = Number(like_count_object.html());
-                like_count_object.html(like_count - 1);
-                console.log(like_count);
-            }
+          console.log(is_like);
+          if (is_like) {
+            $(this).html("favorite");
+            let like_count_object = $(this)
+              .parent()
+              .parent()
+              .next()
+              .find("p")
+              .find("span");
+            let like_count = Number(like_count_object.html());
+            like_count_object.html(like_count + 1);
+            console.log(like_count);
+          } else {
+            $(this).html("favorite_border");
+            let like_count_object = $(this)
+              .parent()
+              .parent()
+              .next()
+              .find("p")
+              .find("span");
+            let like_count = Number(like_count_object.html());
+            like_count_object.html(like_count - 1);
+            console.log(like_count);
+          }
         }
-    });
+      });
 
-
-    $('.close_modal').on("click", () => {
+      $(".close_modal").on("click", () => {
         closeModal();
-    });
+      });
 
-    function closeModal() {
-        $('.modal').css({
-            display: 'none'
+      function closeModal() {
+        $(".modal").css({
+          display: "none",
         });
         $(document.body).css({
-            overflowY: 'visible'
+          overflowY: "visible",
         });
-    };
+      }
 
-    $('.modal_image_upload')
+      $(".modal_image_upload")
         .on("dragover", dragOver)
         .on("dragleave", dragOver)
         .on("drop", uploadFiles);
 
-    function dragOver(e) {
+      function dragOver(e) {
         e.stopPropagation();
         e.preventDefault();
 
         if (e.type == "dragover") {
-            $(e.target).css({
-                "background-color": "black",
-                "outline-offset": "-20px"
-            });
+          $(e.target).css({
+            "background-color": "black",
+            "outline-offset": "-20px",
+          });
         } else {
-            $(e.target).css({
-                "background-color": "white",
-                "outline-offset": "-10px"
-            });
+          $(e.target).css({
+            "background-color": "white",
+            "outline-offset": "-10px",
+          });
         }
-    };
+      }
 
-    let files;
+      let files;
 
-    function uploadFiles(e) {
+      function uploadFiles(e) {
         e.stopPropagation();
         e.preventDefault();
-        console.log(e.dataTransfer)
-        console.log(e.originalEvent.dataTransfer)
+        console.log(e.dataTransfer);
+        console.log(e.originalEvent.dataTransfer);
 
         e.dataTransfer = e.originalEvent.dataTransfer;
 
         files = e.dataTransfer.files;
         if (files.length > 1) {
-            alert('하나만 올려라.');
-            return;
+          alert("하나만 올려라.");
+          return;
         }
 
         if (files[0].type.match(/image.*/)) {
-            $('#modal_add_feed_content').css({
-                display: 'flex'
-            });
-            $('.modal_image_upload_content').css({
-                "background-image": "url(" + window.URL.createObjectURL(files[0]) + ")",
-                "outline": "none",
-                "background-size": "contain",
-                "background-repeat": "no-repeat",
-                "background-position": "center"
-            });
-            $('#modal_add_feed').css({
-                display: 'none'
-            })
+          $("#modal_add_feed_content").css({
+            display: "flex",
+          });
+          $(".modal_image_upload_content").css({
+            "background-image":
+              "url(" + window.URL.createObjectURL(files[0]) + ")",
+            outline: "none",
+            "background-size": "contain",
+            "background-repeat": "no-repeat",
+            "background-position": "center",
+          });
+          $("#modal_add_feed").css({
+            display: "none",
+          });
         } else {
-            alert('이미지가 아닙니다.');
-            return;
+          alert("이미지가 아닙니다.");
+          return;
         }
-    };
-    function ajaxFileUpload() {
+      }
+      function ajaxFileUpload() {
         // 업로드 버튼이 클릭되면 파일 찾기 창을 띄운다.
         jQuery("#ajaxFile").click();
-    }
-       function ajaxFileChange() {
+      }
+      function ajaxFileChange() {
         // 파일이 선택되면 업로드를 진행한다.
         ajaxFileTransmit();
-    }
+      }
 
-
-
-    $('#button_write_feed').on('click', () => {
-        const image = $('#input_image').css("background-image").replace(/^url\(['"](.+)['"]\)/, '$1');
-        const content = $('#input_content').val();
-        const profile_image = $('#input_profile_image').attr('src');
-        const user_id = $('#input_user_id').text();
-        const email = $('#input_email').text();
+      $("#button_write_feed").on("click", () => {
+        const image = $("#input_image")
+          .css("background-image")
+          .replace(/^url\(['"](.+)['"]\)/, "$1");
+        const content = $("#input_content").val();
+        const profile_image = $("#input_profile_image").attr("src");
+        const user_id = $("#input_user_id").text();
+        const email = $("#input_email").text();
 
         const file = files[0];
 
         let fd = new FormData();
 
-        fd.append('file', file);
-        fd.append('image', image);
-        fd.append('content', content);
-        fd.append('profile_image', profile_image);
-        fd.append('user_id', user_id);
-        fd.append('email', email);
+        fd.append("file", file);
+        fd.append("image", image);
+        fd.append("content", content);
+        fd.append("profile_image", profile_image);
+        fd.append("user_id", user_id);
+        fd.append("email", email);
 
         if (image.length <= 0) {
-            alert("이미지가 비어있습니다.");
+          alert("이미지가 비어있습니다.");
         } else if (content.length <= 0) {
-            alert("설명을 입력하세요");
+          alert("설명을 입력하세요");
         } else if (profile_image.length <= 0) {
-            alert("프로필 이미지가 비어있습니다.");
+          alert("프로필 이미지가 비어있습니다.");
         } else if (user_id.length <= 0) {
-            alert("사용자 id가 없습니다.");
+          alert("사용자 id가 없습니다.");
         } else {
-            writeFeed(fd);
-            console.log(files[0]);
+          writeFeed(fd);
+          console.log(files[0]);
         }
-    });
+      });
 
-    function writeFeed(fd) {
+      function writeFeed(fd) {
         $.ajax({
-            url: "/user/profile/update",
-            data: fd,
-            method: "POST",
-            processData: false,
-            contentType: false,
-            success: function (data) {
-                console.log("성공");
-            },
-            error: function (request, status, error) {
-                console.log("에러");
-            },
-            complete: function () {
-                console.log("무조건실행");
-                closeModal();
-                location.reload();
-            }
-        })
-    };
+          url: "/user/profile/update",
+          data: fd,
+          method: "POST",
+          processData: false,
+          contentType: false,
+          success: function (data) {
+            console.log("성공");
+          },
+          error: function (request, status, error) {
+            console.log("에러");
+          },
+          complete: function () {
+            console.log("무조건실행");
+            closeModal();
+            location.reload();
+          },
+        });
+      }
 
-    $('.menu_content').click(function (event){
-        $('.menu_content').css({
-            'border-top': 'none',
-            'font-weight' : 'lighter'
+      $(".menu_content").click(function (event) {
+        $(".menu_content").css({
+          "border-top": "none",
+          "font-weight": "lighter",
         });
         $(this).css({
-            'border-top' : '1px solid gray',
-            'font-weight' : 'bold'
+          "border-top": "1px solid gray",
+          "font-weight": "bold",
         });
 
-        $('.menu_content_box').css({
-            display : 'none'
+        $(".menu_content_box").css({
+          display: "none",
         });
 
-        let target_id = $(this).attr('target_id')
+        let target_id = $(this).attr("target_id");
 
-        $('#'+target_id).css({
-            display : 'flex'
+        $("#" + target_id).css({
+          display: "flex",
         });
-    });
+      });
 
-    $('.go_home').on("click", () => {
-        location.replace('/');
-    });
+      $(".go_home").on("click", () => {
+        location.replace("/");
+      });
 
-    function ajaxFileUpload() {
+      function ajaxFileUpload() {
         // 업로드 버튼이 클릭되면 파일 찾기 창을 띄운다.
         $("#ajaxFile").click();
-    }
+      }
 
-    function ajaxFileChange() {
+      function ajaxFileChange() {
         // 파일이 선택되면 업로드를 진행한다.
         ajaxFileTransmit();
-    }
+      }
 
-    function ajaxFileTransmit() {
+      function ajaxFileTransmit() {
         var formData = new FormData();
         formData.append("file", $("#ajaxFile")[0].files[0]);
 
         $.ajax({
-              url : "/user/profile/upload",
-              type : "POST",
-            processData : false,
-            contentType : false,
-            data : fd,
-            success:function(data) {
-                console.log('성공')
-            },
-            error:function (request, status, error) {
-                console.log("애소")
-            },
-            complete:function(){
-                  console.log('완료')
-                location.replace('/content/profile')
-            }
+          url: "/user/profile/upload",
+          type: "POST",
+          processData: false,
+          contentType: false,
+          data: fd,
+          success: function (data) {
+            console.log("성공");
+          },
+          error: function (request, status, error) {
+            console.log("애소");
+          },
+          complete: function () {
+            console.log("완료");
+            location.replace("/content/profile");
+          },
         });
-    }
-$('#button_profile_upload').click(function (){
-    $('#input_fileupload').click();
-});
+      }
+      $("#button_profile_upload").click(function () {
+        $("#input_fileupload").click();
+      });
 
-   function profile_upload() {
-       let file = $('#input_fileupload')[0].files[0]
-       let email = "{{ user.email }}";
+      function profile_upload() {
+        let file = $("#input_fileupload")[0].files[0];
+        let email = "{{ user.email }}";
 
+        let fd = new FormData();
 
-       let fd = new FormData();
-
-       fd.append('file', file);
-       fd.append('email', email);
+        fd.append("file", file);
+        fd.append("email", email);
 
         $.ajax({
-              url : "{% url 'user:profile_update' %}",
-              type : "POST",
-            processData : false,
-            contentType : false,
-            data : fd,
-            success:function(data) {
-                console.log('성공')
-            },
-            error:function (request, status, error) {
-                console.log("에러")
-            },
-            complete:function(){
-                  console.log('완료')
-                location.replace('/content/profile')
-            }
+          url: "{% url 'user:profile_update' %}",
+          type: "POST",
+          processData: false,
+          contentType: false,
+          data: fd,
+          success: function (data) {
+            console.log("성공");
+          },
+          error: function (request, status, error) {
+            console.log("에러");
+          },
+          complete: function () {
+            console.log("완료");
+            location.replace("/content/profile");
+          },
         });
-   }
-</script>
+      }
+    </script>
 
-<script
-        src="https://kit.fontawesome.com/6478f529f2.js"
-        crossorigin="anonymous"
-></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
